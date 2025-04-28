@@ -8,6 +8,7 @@ import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import ExperienceMain from "./components/experienceSection/ExperienceMain";
 import ProjectsMain from "./components/projectsSection/ProjectsMain";
+import ContactMeMain from "./components/contactMeSection/ContactMeMain";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <SubSkills/>
         <ExperienceMain/>
         <ProjectsMain/>
+        <ContactMeMain/>
         <HelperSection/>
       </main>
   )
