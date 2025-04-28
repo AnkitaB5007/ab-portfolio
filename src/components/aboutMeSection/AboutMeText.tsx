@@ -2,7 +2,7 @@ const AboutMeText = () => {
     return (
         <div className="flex flex-col md:items-start sm:items-center md:text-left sm:text-center">
             <h2 className="text-6xl text-cyan mb-10">About Me</h2>
-            <p className="text-white">A web developer on a mission to make the internet a bit more delightful—one line of code
+            <p className="text-white">I'm Arpita,a web developer on a mission to make the internet a bit more delightful—one line of code
                 at a time! Armed with a keyboard, creativity, and a healthy appetite
                 for pizza, I thrive in the world of pixels and programming while
                 continuously learning and exploring. I believe that laughter can tackle any tricky bug,
