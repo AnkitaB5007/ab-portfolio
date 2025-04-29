@@ -1,4 +1,6 @@
 import React from "react";
+import {motion} from 'framer-motion';
+import {fadeIn} from "../../framerMotion/variants";
 
 interface Experience {
     job: string;
@@ -14,8 +16,12 @@ interface SingleExperienceProps {
 
 const SingleExperience: React.FC<SingleExperienceProps> = ({ experience }) => {
     return (
-        <div className="md:h-[400px] md:w-[300px] sm:h-auto sm:w-full border-2 border-orange border-dashed
+        <motion.div className="md:h-[400px] md:w-[300px] sm:h-auto sm:w-full border-2 border-orange border-dashed
         rounded-2xl mt-12 p-2"
+                    variants={fadeIn('right',0.2)}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: false, amount: 0}}
         >
             <p className="font-bold text-cyan">{experience.job}</p>
             <p className="text-orange">{experience.company}</p>
@@ -26,7 +32,7 @@ const SingleExperience: React.FC<SingleExperienceProps> = ({ experience }) => {
                     return <li key={index} className="text-white">{resp}</li>;
                 })}
             </ul>
-        </div>
+        </motion.div>
     );
 };
 

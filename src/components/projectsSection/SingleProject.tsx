@@ -1,5 +1,7 @@
 import React from "react";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import {motion} from 'framer-motion';
+import {fadeIn} from "../../framerMotion/variants";
 
 interface SingleProjectProps {
     name: string;
@@ -11,9 +13,14 @@ interface SingleProjectProps {
 
 const SingleProject: React.FC<SingleProjectProps> = ({ name, year, align, image, link }) => {
     return (
-        <div className={`flex w-full sm:flex-col-reverse items-center gap-8 ${
+        <motion.div className={`flex w-full sm:flex-col-reverse items-center gap-8 ${
             align === "left" ? "md:flex-row" : "md:flex-row-reverse"
-        } justify-end sm:flex-col`}>
+        } justify-end sm:flex-col`}
+                    variants={fadeIn('up',0.2)}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{once: false, amount: 0}}
+        >
             <div>
                 <h2 className="md:text-3xl sm:text-2xl text-orange ">{name}</h2>
                 <h2
@@ -39,7 +46,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({ name, year, align, image,
                 hover:opacity-0 transition-all duration-500 md:block sm:hidden"></div>
                 <img src={image} alt="website image" className="w-full h-full" />
             </div>
-        </div>
+        </motion.div>
     );
 };
 
