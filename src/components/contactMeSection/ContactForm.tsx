@@ -6,28 +6,45 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [success, setSuccess] = useState("");
-    const handleName = (e) => {
-        setName(e.target.value);
+    const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setName(e.target.value);  // TS understands e.target.value is valid
     };
-    const handleEmail = (e) => {
-        setEmail(e.target.value);
+
+    // Event handler for email input
+    const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);  // TS understands e.target.value is valid
     };
-    const handleMessage = (e) => {
-        setMessage(e.target.value);
+
+    // Event handler for textarea
+    const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setMessage(e.target.value);  // TS understands e.target.value is valid
     };
-    const form = useRef<HTMLFormElement>(null);
-    const sendEmail = (e) => {
+
+    const form = useRef<HTMLFormElement | null>(null); // Ensure the ref can be null
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        if (!form.current) {
+            console.error("Form reference is null");
+            return;
+        }
+
         emailjs
-            .sendForm(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID, import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID!, form.current, {
-                publicKey: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY!,
-            })
+            .sendForm(
+                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID!,
+                form.current,
+                {
+                    publicKey: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY!,
+                }
+            )
             .then(
                 () => {
                     setEmail("");
                     setName("");
                     setMessage("");
-                    setSuccess("Message Sent Succesfully");
+                    setSuccess("Message Sent Successfully");
                 },
                 (error) => {
                     console.log("FAILED...", error.text);
@@ -58,10 +75,9 @@ const ContactForm = () => {
                     onChange={handleEmail}
                 />
                 <textarea
-                    type="text"
                     name="message"
-                    rows="9"
-                    cols="50"
+                    rows={9}
+                    cols={50}
                     placeholder="Message"
                     required
                     className=" rounded-lg bg-lightBrown p-2"

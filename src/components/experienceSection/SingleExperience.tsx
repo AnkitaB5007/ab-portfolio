@@ -1,13 +1,12 @@
-import React, {useRef} from "react";
 import {motion} from 'framer-motion';
 import {Experience} from "../../constants/experienceData";
+import React from "react";
 
 interface SingleExperienceProps {
     experience: Experience;
 }
 
 const SingleExperience: React.FC<SingleExperienceProps> = ({ experience }) => {
-    const ref = useRef(null);
     return (
         <motion.div className="md:h-[400px] md:w-[300px] sm:h-auto sm:w-full border-2 border-orange border-dashed
         rounded-2xl mt-12 p-2"
