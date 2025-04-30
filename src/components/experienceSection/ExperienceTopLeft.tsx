@@ -18,6 +18,9 @@ const ExperienceTopLeft = () => {
             <ExperienceInfo number="720000" text="Customers" />
             <ExperienceInfo number="4500" text="New Users monthly" />
             <ExperienceInfo number="8500000" text="Logins per month" />
+            <p className="text-center text-white text-xl">
+                *In my current company (dealing with banking domain)
+            </p>
         </div>
     );
 };

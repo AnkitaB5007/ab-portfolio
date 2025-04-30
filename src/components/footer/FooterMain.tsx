@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 interface FooterLink {
     name: string;
     section: string;
@@ -31,10 +33,16 @@ const FooterMain = () => {
                     {footerLinks.map((item, index) => {
                         return (
                             <li key={index}>
-                                <a href="#"
-                                    className="hover:text-white transition-all duration-500 cursor-pointer">
+                                <Link
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                    offset={-120}
+                                    to={item.section}
+                                    className="hover:text-white transition-all duration-500 cursor-pointer"
+                                >
                                     {item.name}
-                                </a>
+                                </Link>
                             </li>
                         );
                     })}

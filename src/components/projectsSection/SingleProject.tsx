@@ -2,16 +2,10 @@ import React from "react";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import {motion} from 'framer-motion';
 import {fadeIn} from "../../framerMotion/variants";
+import {Project} from "../../constants/projectsData";
 
-interface SingleProjectProps {
-    name: string;
-    year: string;
-    align: "left" | "right";
-    image: string;
-    link:string;
-};
 
-const SingleProject: React.FC<SingleProjectProps> = ({ name, year, align, image, link }) => {
+const SingleProject: React.FC<Project> = ({ name, year, align, image, link }) => {
     return (
         <motion.div className={`flex w-full sm:flex-col-reverse items-center gap-8 ${
             align === "left" ? "md:flex-row" : "md:flex-row-reverse"
@@ -32,6 +26,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({ name, year, align, image,
                 </h2>
                 <a
                     href={link}
+                    target="_blank"
                     className={`text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer sm:justify-self-center ${
                         align === "left" ? "md:justify-self-end" : "md:justify-self-start"
                     }`}

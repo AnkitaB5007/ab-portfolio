@@ -1,4 +1,4 @@
-import { PiHexagonFill } from "react-icons/pi";
+import { FaRegSquare } from "react-icons/fa";
 import {motion} from 'framer-motion';
 import {fadeIn} from "../../framerMotion/variants";
 
@@ -12,7 +12,7 @@ const HeroPic = () => {
         >
             <img src='/images/HexaPic.jpeg' alt='arpita' className='w-[300px] h-[300px] w-auto'/>
             <div className="absolute -z-10 flex justify-center items-center animate-pulse">
-                <PiHexagonFill className="md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-cyan blur-md animate-[spin_20s_linear_in]"/>
+                <FaRegSquare className="md:h-[60%] sm:h-[80%] min-h-[500px] w-auto text-cyan blur-md animate-[spin_20s_linear_in]"/>
             </div>
         </motion.div>
     );

@@ -1,13 +1,6 @@
 import React, {useRef} from "react";
 import {motion} from 'framer-motion';
-
-interface Experience {
-    job: string;
-    company: string;
-    location: string;
-    date: string;
-    responsibilities: string[];
-}
+import {Experience} from "../../constants/experienceData";
 
 interface SingleExperienceProps {
     experience: Experience;
