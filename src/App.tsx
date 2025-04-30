@@ -10,12 +10,14 @@ import ExperienceMain from "./components/experienceSection/ExperienceMain";
 import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import ContactMeMain from "./components/contactMeSection/ContactMeMain";
 import FooterMain from "./components/footer/FooterMain";
+import ProgressBarMain from "./components/progressbarSection/ProgressBarMain";
 
 function App() {
 
 
   return (
       <main className="font-body">
+        <ProgressBarMain/>
         <NavbarMain/>
         <HeroMain/>
         <HeroGradient/>
