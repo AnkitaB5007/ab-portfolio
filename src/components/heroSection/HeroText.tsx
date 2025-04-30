@@ -1,6 +1,16 @@
 import {motion} from 'framer-motion';
 import {fadeIn} from "../../framerMotion/variants";
 
+interface WordItem {
+    text: string;
+    imgPath: string;
+};
+export const words: WordItem[] = [
+    {text: "Concepts", imgPath: '/images/concepts.svg'},
+    {text: "Ideas", imgPath: '/images/ideas.svg'},
+    {text: "Designs", imgPath: '/images/designs.svg'},
+];
+
 const HeroText = () => {
     return (
         <div className="flex flex-col gap-4 h-full justify-center md:text-left sm:text-center">
@@ -20,14 +30,25 @@ const HeroText = () => {
             >
                 Arpita Behura
             </motion.h1>
-            <motion.p className="text-lg mt-4 text-white"
-                      variants={fadeIn('up',0.6)}
-                      initial='hidden'
-                      whileInView='show'
-                      viewport={{once: false, amount: 0}}
+            <motion.div className="hero-text"
+                        variants={fadeIn('up',0.6)}
+                        initial='hidden'
+                        whileInView='show'
+                        viewport={{once: false, amount: 0}}
             >
-                Bringing Dreams to Life <br/>through Dynamic Web Creations
-            </motion.p>
+                <h1 className="md:text-[2.7rem] lg:text-5xl sm:text-3xl mt-4 font-bold font-special text-white">Bringing
+                    <span className="slide">
+                        <span className="wrapper">
+                            {words.map(word => <span key={word.text} className="flex items-center md:gap-4 gap:3 pb:2">
+                                <img src={word.imgPath} alt={word.text} className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full white-bg"/>
+                                <span>{word.text}</span>
+                            </span>)}
+                        </span>
+                    </span>
+                </h1>
+                <h1 className="md:text-[2.7rem] lg:text-5xl sm:text-3xl mt-4 font-bold font-special text-white">to Life through</h1>
+                <h1 className="md:text-[2.7rem] lg:text-5xl sm:text-3xl mt-4 font-bold font-special text-white">Dynamic Creations!</h1>
+            </motion.div>
         </div>
     );
 };
