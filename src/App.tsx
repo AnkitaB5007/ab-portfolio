@@ -29,7 +29,7 @@ function App() {
         <ProjectsMain/>
         <ContactMeMain/>
         <FooterMain/>
-        <HelperSection/>
+        {/*<HelperSection/>*/}
       </main>
   )
 }

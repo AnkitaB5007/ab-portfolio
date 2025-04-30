@@ -1,7 +1,4 @@
-import { FaArrowRightLong } from "react-icons/fa6";
 import SingleExperience from "./SingleExperience";
-import {motion} from 'framer-motion';
-import {fadeIn} from "../../framerMotion/variants";
 
 interface Experience {
     job: string;
@@ -74,7 +71,6 @@ const AllExperiences = () => {
                 return(
                     <>
                         <SingleExperience key={index} experience={experience} />
-                        {/*{index <2 ?  <FaArrowRightLong className="text-2xl text-orange lg:block sm:hidden" /> : ""}*/}
                     </>
                 )
             })}
