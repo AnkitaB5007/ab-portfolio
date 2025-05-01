@@ -1,3 +1,10 @@
 {
-  "designation": "Full-Stack Web-Entwickler"
+  "navBar": {
+    "nav_link_about": "Über mich",
+    "nav_link_skills": "Fähigkeiten",
+    "nav_link_experience": "Erfahrung",
+    "nav_link_projects": "Projekte",
+    "nav_link_contact": "Kontakt",
+    "nav_btn_hire": "Beauftrage mich"
+  }
 }

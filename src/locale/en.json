@@ -1,3 +1,10 @@
 {
-  "designation": "Full-Stack Web Developer"
+  "navBar": {
+    "nav_link_about": "About Me",
+    "nav_link_skills": "Skills",
+    "nav_link_experience": "Experience",
+    "nav_link_projects": "Projects",
+    "nav_link_contact": "Contact",
+    "nav_btn_hire": "Hire Me"
+  }
 }
