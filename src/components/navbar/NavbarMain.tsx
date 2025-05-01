@@ -5,8 +5,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher";
 import { requiredLanguages } from "../../constants/languageSwitcherData";
+import { useTranslation } from "react-i18next";
 
 const NavbarMain = () => {
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedLanguageCode, setSelectedLanguageCode] = useState("en");
   const toggleMenu = () => {
@@ -14,12 +16,14 @@ const NavbarMain = () => {
   };
 
   const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
     setSelectedLanguageCode(lang);
   };
   return (
     <nav className="max-w-[1300px] mx-auto w-full  px-4 fixed left-[50%] -translate-x-[50%] z-20 flex gap-4 mt-2">
       <div className="flex justify-between w-full max-w-[1200px] mx-auto  bg-black items-center p-6 rounded-r-full rounded-l-full border-orange border-[0.5px]">
         <NavbarLogo />
+        <p className="text-white">{t("designation")}</p>
         <LanguageSwitcher
           requiredLanguages={requiredLanguages} // Ensure this prop is defined
           onSelectionChange={handleLanguageChange}

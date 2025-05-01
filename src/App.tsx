@@ -10,26 +10,25 @@ import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import ContactMeMain from "./components/contactMeSection/ContactMeMain";
 import FooterMain from "./components/footer/FooterMain";
 import ProgressBarMain from "./components/progressbarSection/ProgressBarMain";
+import "./i18n";
 
 function App() {
-
-
   return (
-      <main className="font-body">
-        <ProgressBarMain/>
-        <NavbarMain/>
-        <HeroMain/>
-        <HeroGradient/>
-        <SubHeroSection/>
-        <AboutMeMain/>
-        <SkillsMain/>
-        <SubSkills/>
-        <ExperienceMain/>
-        <ProjectsMain/>
-        <ContactMeMain/>
-        <FooterMain/>
-      </main>
-  )
+    <main className="font-body">
+      <ProgressBarMain />
+      <NavbarMain />
+      <HeroMain />
+      <HeroGradient />
+      <SubHeroSection />
+      <AboutMeMain />
+      <SkillsMain />
+      <SubSkills />
+      <ExperienceMain />
+      <ProjectsMain />
+      <ContactMeMain />
+      <FooterMain />
+    </main>
+  );
 }
 
 export default App;
