@@ -6,5 +6,14 @@
     "nav_link_projects": "Projects",
     "nav_link_contact": "Contact",
     "nav_btn_hire": "Hire Me"
+  },
+  "heroSection": {
+    "hero_text_designation": "Full-Stack Web Developer",
+    "hero_text_tagline_1": "Building",
+    "hero_text_tagline_2": "to Life through",
+    "hero_text_tagline_3": "dynamic creations!",
+    "hero_text_slide_1": "Concepts",
+    "hero_text_slide_2": "Ideas",
+    "hero_text_slide_3": "Designs"
   }
 }

@@ -1,9 +1,9 @@
 export interface WordItem {
-    text: string;
-    imgPath: string;
-};
+  slideText: string;
+  imgPath: string;
+}
 export const words: WordItem[] = [
-    {text: "Concepts", imgPath: '/images/concepts.svg'},
-    {text: "Ideas", imgPath: '/images/ideas.svg'},
-    {text: "Designs", imgPath: '/images/designs.svg'},
+  { slideText: "hero_text_slide_1", imgPath: "/images/concepts.svg" },
+  { slideText: "hero_text_slide_2", imgPath: "/images/ideas.svg" },
+  { slideText: "hero_text_slide_3", imgPath: "/images/designs.svg" },
 ];

@@ -5,7 +5,6 @@ import en from "./locale/en.json";
 import de from "./locale/de.json";
 
 i18next.use(initReactI18next).init({
-  debug: true,
   resources: {
     en: { translation: en },
     de: { translation: de },

@@ -6,5 +6,14 @@
     "nav_link_projects": "Projekte",
     "nav_link_contact": "Kontakt",
     "nav_btn_hire": "Beauftrage mich"
+  },
+  "heroSection": {
+    "hero_text_designation": "Full-Stack Web-Entwickler",
+    "hero_text_tagline_1": "Zum Leben",
+    "hero_text_tagline_2": "durch Erweckung",
+    "hero_text_tagline_3": "dynamische Kreationen!",
+    "hero_text_slide_1": "Konzepte",
+    "hero_text_slide_2": "Ideen",
+    "hero_text_slide_3": "Designs"
   }
 }
