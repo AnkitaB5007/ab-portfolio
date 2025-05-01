@@ -14,6 +14,15 @@
     "hero_text_tagline_3": "dynamische Kreationen!",
     "hero_text_slide_1": "Konzepte",
     "hero_text_slide_2": "Ideen",
-    "hero_text_slide_3": "Designs"
+    "hero_text_slide_3": "Designs",
+    "hero_text_subHero_1": "Schnelllerner",
+    "hero_text_subHero_2": "Teamarbeit",
+    "hero_text_subHero_3": "Detailmeister"
+  },
+  "aboutMeSection": {
+    "aboutMe_text": "Über mich",
+    "aboutMe_text_intro": "Ich bin Arpita, ein Webentwickler mit der Mission, das Internet ein bisschen erfreulicher zu gestalten – eine Codezeile nach der anderen! Bewaffnet mit einer Tastatur, Kreativität und einem gesunden Appetit auf Pizza blühe ich in der Welt der Pixel und Programmierung auf, während ich stetig lerne und erkunde. Ich glaube, dass Lachen jeden kniffligen Fehler bewältigen kann, und ich möchte Websites erstellen, die die Nutzer zum Grinsen bringen",
+    "aboutMe_text_connect": "Lass uns zusammenarbeiten und etwas Außergewöhnliches kreieren, während wir den Spaß am Leben halten!",
+    "aboutMe_btn_projects": "Meine Projekte"
   }
 }
