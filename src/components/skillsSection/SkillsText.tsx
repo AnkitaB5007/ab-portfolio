@@ -1,14 +1,17 @@
+import { useTranslation } from "react-i18next";
+
 const SkillsText = () => {
-    return (
-        <div className="flex flex-col items-center mt-[100px]">
-            <h2 className="text-6xl text-cyan mb-10">My Skills</h2>
-            <p className="text-lg text-center text-white">
-                I not only work with these technologies but excellent in using them with
-                best practices to deliver high-quality results, I have been working with
-                all these skills to build my portfolio projects
-            </p>
-        </div>
-    );
+  const { t } = useTranslation();
+  return (
+    <div className="flex flex-col items-center mt-[100px]">
+      <h2 className="text-6xl text-cyan mb-10">
+        {t("skillsSection.skills_text")}
+      </h2>
+      <p className="text-lg text-center text-white">
+        {t("skillsSection.skills_text_shortDesc")}
+      </p>
+    </div>
+  );
 };
 
 export default SkillsText;
