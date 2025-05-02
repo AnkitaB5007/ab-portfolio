@@ -4,13 +4,11 @@ import { words } from "../../constants/heroData";
 import { useTranslation } from "react-i18next";
 
 const HeroText = () => {
-  const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language;
-  console.log("currentLang ", currentLanguage);
+  const { t } = useTranslation();
   return (
-    <div className="flex w-[60%] flex-col gap-4 h-full justify-center md:text-left sm:text-center">
+    <div className="flex w-full md:w-[60%] flex-col gap-4 h-full justify-center text-center md:text-left mb-[10rem] md:mb-0">
       <motion.h2
-        className="lg:text-2xl sm:text-xl uppercase text-cyan"
+        className="text-[2.5rem] lg:text-2xl sm:text-xl uppercase text-cyan"
         variants={fadeIn("down", 0.2)}
         initial="hidden"
         whileInView="show"
@@ -19,7 +17,7 @@ const HeroText = () => {
         {t("heroSection.hero_text_designation")}
       </motion.h2>
       <motion.h1
-        className="md:text-[2.8rem] lg:text-6xl sm:text-4xl font-bold font-special text-orange"
+        className="text-[2rem] md:text-[2.8rem] lg:text-6xl sm:text-4xl font-bold font-special text-orange"
         variants={fadeIn("right", 0.4)}
         initial="hidden"
         whileInView="show"
@@ -28,7 +26,7 @@ const HeroText = () => {
         Arpita Behura
       </motion.h1>
       <motion.div
-        className="hero-text"
+        className="hero-text text-left md:text-center"
         variants={fadeIn("up", 0.6)}
         initial="hidden"
         whileInView="show"
@@ -41,7 +39,7 @@ const HeroText = () => {
               {words.map((word) => (
                 <span
                   key={t(`heroSection.${word.slideText}`)}
-                  className="flex items-center md:gap-3 gap:2 pb-[3px]"
+                  className="flex items-center md:gap-3 gap-2 pb-[3px]"
                 >
                   <img
                     src={word.imgPath}
