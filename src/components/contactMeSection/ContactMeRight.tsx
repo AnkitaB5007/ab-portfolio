@@ -3,7 +3,7 @@ import ContactSocial from "./ContactSocial";
 
 const ContactMeRight = () => {
   return (
-    <div className="sm:block flex flex-col items-center justify-center gap-12">
+    <div className="block sm:flex sm:flex-col items-center justify-center gap-12">
       <img
         src="/images/email-image.png"
         alt="email image"
