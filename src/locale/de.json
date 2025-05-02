@@ -123,5 +123,10 @@
         ]
       }
     ]
+  },
+  "projectsSection": {
+    "projects_text": "Projekte",
+    "projects_shortDesc": "Ich habe an einer Vielzahl von Webentwicklungsprojekten gearbeitet, von responsiven Websites für kleine Unternehmen bis hin zu Full-Stack-Anwendungen und komplexen Front-End-Oberflächen.",
+    "projects_btn_view": "Ansehen"
   }
 }

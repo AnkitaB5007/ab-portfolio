@@ -123,5 +123,10 @@
         ]
       }
     ]
+  },
+  "projectsSection": {
+    "projects_text": "Projects",
+    "projects_shortDesc": "I have worked on a variety of web development projects, ranging from responsive websites for small businesses to full-stack applications and complex front-end interfaces.",
+    "projects_btn_view": "View"
   }
 }
