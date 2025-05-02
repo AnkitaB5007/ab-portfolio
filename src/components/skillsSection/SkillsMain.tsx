@@ -18,10 +18,12 @@ const SkillsMain = () => {
         >
           <SkillsText />
         </motion.div>
-        <div className="bottom-[50px] absolute left-[50%] -translate-x-[50%] sm:hidden lg:block">
+        {/* Ensure AllSkills is hidden on small screens */}
+        <div className="hidden lg:block absolute bottom-[50px] left-[50%] -translate-x-[50%]">
           <AllSkills />
         </div>
-        <div className="sm:block lg:hidden">
+        {/* Display AllSkillsSM on small and medium screens, hidden on large */}
+        <div className="block lg:hidden">
           <AllSkillsSM />
         </div>
       </div>
