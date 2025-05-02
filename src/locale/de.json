@@ -46,5 +46,28 @@
     "contactMe_form_placeholder_email": "Ihre E-Mail",
     "contactMe_form_placeholder_message": "Ihre Nachricht",
     "contactMe_form_btn_submit": "Absenden"
+  },
+  "experienceSection": {
+    "experience_text": "Erfahrung",
+    "experience_text_since_year": "Seit 2022",
+    "experience_text_years": "Jahre",
+    "experience_text_websites": "Websites",
+    "experience_text_shortDesc": "Mit 4 Jahren Erfahrung in der Erstellung dynamischer und benutzerfreundlicher Webanwendungen.",
+    "experience_text_customers": "Kunden",
+    "experience_text_new_users_monthly": "Neue Benutzer monatlich",
+    "experience_text_logins_per_month": "Logins pro Monat",
+    "experience_text_shortDesc_note": "*In meinem aktuellen Unternehmen (im Bankwesen tätig)",
+    "experienceDetails_text": {
+      "specialization": "Ich spezialisiere mich auf",
+      "technologies": "React, Angular, Next JS und modernes JavaScript",
+      "description": "nutzbare Best Practices, um skalierbare und wartbare Lösungen zu schaffen.",
+      "handsOnExperience": "Zusätzlich habe ich praktische Erfahrungen mit",
+      "backendTechnology": "Node.js,",
+      "understanding": "was es mir ermöglicht, sowohl Frontend- als auch Backend-Systeme effektiv zu verstehen und daran mitzuwirken.",
+      "overallExperience": "Meine Erfahrung erstreckt sich über eine Vielzahl von Projekten, von kleinen Unternehmenswebsites bis hin zu komplexen",
+      "projectType": "Webanwendungen",
+      "codeQuality": "wo ich konsequent Wert auf sauberen Code und außergewöhnliche Benutzererfahrungen lege.",
+      "integration": "Durch die Überbrückung der Kluft zwischen Frontend- und Backend-Entwicklung sorge ich für nahtlose Funktionalität und Integration über alle Ebenen der Anwendung."
+    }
   }
 }

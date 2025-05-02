@@ -46,5 +46,28 @@
     "contactMe_form_placeholder_email": "Your Email",
     "contactMe_form_placeholder_message": "Your Message",
     "contactMe_form_btn_submit": "Submit"
+  },
+  "experienceSection": {
+    "experience_text": "Experience",
+    "experience_text_since_year": "Since 2022",
+    "experience_text_years": "years",
+    "experience_text_websites": "websites",
+    "experience_text_shortDesc": "With 4 years of experience building dynamic and user-friendly web applications.",
+    "experience_text_customers": "customers",
+    "experience_text_new_users_monthly": "New Users monthly",
+    "experience_text_logins_per_month": "Logins per month",
+    "experience_text_shortDesc_note": "*In my current company (dealing with banking domain)",
+    "experienceDetails_text": {
+      "specialization": "I specialize in",
+      "technologies": "React, Angular, Next JS and modern JavaScript",
+      "description": "leveraging best practices to create scalable and maintainable solutions.",
+      "handsOnExperience": "Additionally, I have hands-on experience with",
+      "backendTechnology": "Node.js,",
+      "understanding": "enabling me to understand and contribute to both frontend and backend systems effectively.",
+      "overallExperience": "My experience spans a variety of projects, from small business websites to complex",
+      "projectType": "web applications",
+      "codeQuality": "where I consistently prioritize clean code and exceptional user experiences.",
+      "integration": "By bridging the gap between frontend and backend development, I ensure seamless functionality and integration across all layers of the application."
+    }
   }
 }
