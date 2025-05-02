@@ -3,6 +3,7 @@ import { FaHtml5, FaCss3Alt, FaReact, FaNode, FaAngular } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiTypescript, SiRedux, SiNextdotjs, SiShadcnui } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { SiStorybook } from "react-icons/si";
 
 interface Skill {
   skill: string;
@@ -47,11 +48,15 @@ export const skills: Skill[] = [
     icon: FaNode,
   },
   {
-    skill: "TailwindCSS",
+    skill: "Tailwind",
     icon: RiTailwindCssFill,
   },
   {
     skill: "Shadcnui",
     icon: SiShadcnui,
+  },
+  {
+    skill: "Storybook",
+    icon: SiStorybook,
   },
 ];
