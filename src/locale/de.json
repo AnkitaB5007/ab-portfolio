@@ -68,6 +68,60 @@
       "projectType": "Webanwendungen",
       "codeQuality": "wo ich konsequent Wert auf sauberen Code und außergewöhnliche Benutzererfahrungen lege.",
       "integration": "Durch die Überbrückung der Kluft zwischen Frontend- und Backend-Entwicklung sorge ich für nahtlose Funktionalität und Integration über alle Ebenen der Anwendung."
-    }
+    },
+    "experienceAllYearCategorization": [
+      {
+        "job": "Full-Stack-Entwickler",
+        "company": "COMECO GmbH & Co. KG",
+        "location": "Stuttgart",
+        "date": "2024 - Gegenwart",
+        "responsibilities": [
+          "Benutzeroberflächenfunktionen mit JavaScript-Frameworks erstellen",
+          "Responsive, mobilfreundliche Designs erstellen",
+          "Komponentenstatus verwalten",
+          "Serverseitige Logik mit Node.js entwickeln",
+          "API-Entwicklung verwalten",
+          "Datenbanken verwalten",
+          "Testen und Debuggen"
+        ]
+      },
+      {
+        "job": "Front-End-Entwickler",
+        "company": "COMECO GmbH & Co. KG",
+        "location": "Stuttgart",
+        "date": "2022 - 2023",
+        "responsibilities": [
+          "Wiederverwendbare Komponenten implementiert",
+          "Daten von Backend-APIs abgerufen und angezeigt",
+          "An großen Anwendungen teilgenommen",
+          "An der Leistung von Webanwendungen gearbeitet",
+          "Neue Ideen für eine bessere Benutzererfahrung generiert"
+        ]
+      },
+      {
+        "job": "Softwareentwickler",
+        "company": "Cognizant Technology Solutions",
+        "location": "Indien",
+        "date": "2018 - 2019",
+        "responsibilities": [
+          "Responsive, barrierefreie und browserkompatible Webseiten entwickelt",
+          "UI/UX-Designs (häufig von Figma oder Adobe XD) in vollständige funktionale Webkomponenten und Layouts übersetzt",
+          "Probleme, die von QA oder Benutzern gemeldet wurden, identifiziert und Frontend-Bugs behoben"
+        ]
+      },
+      {
+        "job": "Senior Test Analyst",
+        "company": "Cognizant Technology Solutions",
+        "location": "Indien",
+        "date": "2018 - 2019",
+        "responsibilities": [
+          "ETL-Tests durchgeführt",
+          "Geschäftsabläufe identifiziert und Teststrategien definiert",
+          "Testfälle entwickelt",
+          "Bugs/Defekte verfolgt",
+          "Datenvergleiche zwischen Quelle und Ziel durchgeführt"
+        ]
+      }
+    ]
   }
 }
