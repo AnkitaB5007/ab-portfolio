@@ -11,7 +11,13 @@ const NavbarBtn = () => {
         hover:scale-110 hover:shadow-cyan
         transition-all duration-500"
     >
-      <Link spy={true} smooth={true} duration={500} offset={-120} to="contact">
+      <Link
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-120}
+        to={t("contactMeSection.contact")}
+      >
         {t("navBar.nav_btn_hire")}
       </Link>
       <div className="sm:hidden md:block">
