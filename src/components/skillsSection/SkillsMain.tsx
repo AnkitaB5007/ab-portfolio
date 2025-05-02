@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 const SkillsMain = () => {
   const { t } = useTranslation();
   return (
-    <div id="skills">
+    <div id={t("skillsSection.skills")}>
       <div className="max-w-[1200px] px-4 mx-auto min-h-[600px] relative overflow-hidden">
         <motion.div
           variants={fadeIn("down", 0.2)}

@@ -6,7 +6,7 @@ const ContactMeMain = () => {
   const { t } = useTranslation();
   return (
     <div
-      id="contact"
+      id={t("contactMeSection.contact")}
       className="max-w-[1200px] mx-auto items-center justify-center mt-[100px] px-4 "
     >
       <h2 className="text-6xl text-cyan mb-10 text-center">

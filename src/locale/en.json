@@ -34,10 +34,12 @@
     "footer_text_rights": "All Rights Reserved"
   },
   "skillsSection": {
+    "skills": "Skills",
     "skills_text": "My Skills",
     "skills_text_shortDesc": "I not only work with these technologies but excellent in using them with best practices to deliver high-quality results, I have been working with all these skills to build my portfolio projects"
   },
   "contactMeSection": {
+    "contact": "Contact",
     "contactMe_text": "Contact Me",
     "contactMe_text_connect": "Get In Touch",
     "contactMe_text_connect_shortDesc1": "Feel free to reach out if you’d like to collaborate",
@@ -71,6 +73,7 @@
     },
     "experienceAllYearCategorization": [
       {
+        "indexNo": 1,
         "job": "Full-Stack Developer",
         "company": "COMECO GmbH & Co. KG",
         "location": "Stuttgart",
@@ -86,6 +89,7 @@
         ]
       },
       {
+        "indexNo": 2,
         "job": "Front-End Developer",
         "company": "COMECO GmbH & Co. KG",
         "location": "Stuttgart",
@@ -99,6 +103,7 @@
         ]
       },
       {
+        "indexNo": 3,
         "job": "Software Developer",
         "company": "Cognizant Technology Solutions",
         "location": "India",
@@ -110,6 +115,7 @@
         ]
       },
       {
+        "indexNo": 4,
         "job": "Senior Test Analyst",
         "company": "Cognizant Technology Solutions",
         "location": "India",

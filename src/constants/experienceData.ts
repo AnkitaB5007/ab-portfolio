@@ -1,4 +1,5 @@
 export interface Experience {
+  indexNo: number;
   job: string;
   company: string;
   location: string;

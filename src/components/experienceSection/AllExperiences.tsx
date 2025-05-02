@@ -10,11 +10,9 @@ const AllExperiences = () => {
 
   return (
     <div className="flex flex-wrap md:flex-row sm:flex-col items-center justify-between">
-      {experiences.map((experience: Experience, index: number) => {
+      {experiences.map((experience: Experience) => {
         return (
-          <>
-            <SingleExperience key={index} experience={experience} />
-          </>
+          <SingleExperience key={experience.indexNo} experience={experience} />
         );
       })}
     </div>

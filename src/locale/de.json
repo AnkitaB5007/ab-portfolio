@@ -34,10 +34,12 @@
     "footer_text_rights": "Alle Rechte vorbehalten"
   },
   "skillsSection": {
+    "skills": "Fähigkeiten",
     "skills_text": "Meine Fähigkeiten",
     "skills_text_shortDesc": "Ich arbeite nicht nur mit diesen Technologien, sondern bin auch ausgezeichnet darin, sie mit den besten Praktiken zu nutzen, um hochwertige Ergebnisse zu liefern. Ich arbeite mit all diesen Fähigkeiten, um meine Portfolio-Projekte zu erstellen."
   },
   "contactMeSection": {
+    "contact": "Kontakt",
     "contactMe_text": "Kontaktiere mich",
     "contactMe_text_connect": "Nehmen Sie Kontakt auf",
     "contactMe_text_connect_shortDesc1": "Fühlen Sie sich frei, sich zu melden, wenn Sie zusammenarbeiten möchten -",
