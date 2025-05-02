@@ -36,5 +36,15 @@
   "skillsSection": {
     "skills_text": "Meine Fähigkeiten",
     "skills_text_shortDesc": "Ich arbeite nicht nur mit diesen Technologien, sondern bin auch ausgezeichnet darin, sie mit den besten Praktiken zu nutzen, um hochwertige Ergebnisse zu liefern. Ich arbeite mit all diesen Fähigkeiten, um meine Portfolio-Projekte zu erstellen."
+  },
+  "contactMeSection": {
+    "contactMe_text": "Kontaktiere mich",
+    "contactMe_text_connect": "Nehmen Sie Kontakt auf",
+    "contactMe_text_connect_shortDesc1": "Fühlen Sie sich frei, sich zu melden, wenn Sie zusammenarbeiten möchten -",
+    "contactMe_text_connect_shortDesc2": "Sie sind nur ein paar Klicks entfernt!",
+    "contactMe_form_placeholder_name": "Ihr Name",
+    "contactMe_form_placeholder_email": "Ihre E-Mail",
+    "contactMe_form_placeholder_message": "Ihre Nachricht",
+    "contactMe_form_btn_submit": "Absenden"
   }
 }

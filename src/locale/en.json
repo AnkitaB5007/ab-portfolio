@@ -36,5 +36,15 @@
   "skillsSection": {
     "skills_text": "My Skills",
     "skills_text_shortDesc": "I not only work with these technologies but excellent in using them with best practices to deliver high-quality results, I have been working with all these skills to build my portfolio projects"
+  },
+  "contactMeSection": {
+    "contactMe_text": "Contact Me",
+    "contactMe_text_connect": "Get In Touch",
+    "contactMe_text_connect_shortDesc1": "Feel free to reach out if you’d like to collaborate",
+    "contactMe_text_connect_shortDesc2": "you are just a few clicks away!",
+    "contactMe_form_placeholder_name": "Your Name",
+    "contactMe_form_placeholder_email": "Your Email",
+    "contactMe_form_placeholder_message": "Your Message",
+    "contactMe_form_btn_submit": "Submit"
   }
 }
