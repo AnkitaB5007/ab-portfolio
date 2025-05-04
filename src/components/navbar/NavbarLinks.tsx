@@ -4,9 +4,10 @@ import { useTranslation } from "react-i18next";
 
 interface NavbarLinksProps {
   isMobile: boolean;
+  onLinkClick: () => void;
 }
 
-const NavbarLinks: React.FC<NavbarLinksProps> = ({ isMobile }) => {
+const NavbarLinks: React.FC<NavbarLinksProps> = ({ isMobile, onLinkClick }) => {
   const { t } = useTranslation();
 
   return (
@@ -30,6 +31,7 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ isMobile }) => {
             spy={true}
             duration={500}
             offset={-130}
+            onClick={onLinkClick}
           >
             {t(`navBar.${link.section}`)}
           </Link>
