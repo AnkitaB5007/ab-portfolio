@@ -6,7 +6,7 @@ const AllExperiences = () => {
   const { t } = useTranslation();
   const experiences = t("experienceSection.experienceAllYearCategorization", {
     returnObjects: true,
-  }) as Experience;
+  }) as Experience[];
 
   return (
     <div className="flex flex-wrap md:flex-row sm:flex-col items-center justify-between">

@@ -12,17 +12,17 @@ const NavbarMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedLanguageCode, setSelectedLanguageCode] = useState("en");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  const handleClickOutsideMenu = (event) => {
+  const handleClickOutsideMenu = (event: MouseEvent) => {
     // Check if the click was outside the menu
     if (
       menuOpen &&
       menuRef.current &&
-      !menuRef.current.contains(event.target)
+      !menuRef.current.contains(event.target as Node)
     ) {
       setMenuOpen(false);
     }
@@ -70,7 +70,10 @@ const NavbarMain = () => {
 
         {/* Navbar Links for Medium and Large Screens */}
         <div className="hidden lg:flex">
-          <NavbarLinks isMobile={isMobile} />
+          <NavbarLinks
+            isMobile={isMobile}
+            onLinkClick={() => setMenuOpen(false)}
+          />
         </div>
         <NavbarBtn />
       </div>
