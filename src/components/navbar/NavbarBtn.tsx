@@ -6,8 +6,8 @@ const NavbarBtn = () => {
   const { t } = useTranslation();
   return (
     <button
-      className="px-4 py-2 rounded-full text-xl font-bold text-white border-cyan border
-        flex items-center gap-1 bg-gradient-to-r from-cyan to-orange hover:border-orange
+      className="px-6 py-3 rounded-full text-2xl font-bold text-white border-cyan border hidden lg:flex
+        items-center gap-2 bg-gradient-to-r from-cyan to-orange hover:border-orange
         hover:scale-110 hover:shadow-cyan
         transition-all duration-500"
     >
@@ -20,9 +20,7 @@ const NavbarBtn = () => {
       >
         {t("navBar.nav_btn_hire")}
       </Link>
-      <div className="sm:hidden md:block">
-        <LuArrowDownRight />
-      </div>
+      <LuArrowDownRight />
     </button>
   );
 };
