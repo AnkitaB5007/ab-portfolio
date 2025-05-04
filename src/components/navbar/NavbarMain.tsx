@@ -1,7 +1,7 @@
 import NavbarLinks from "./NavbarLinks";
 import NavbarLogo from "./NavbarLogo";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher";
 import { requiredLanguages } from "../../constants/languageSwitcherData";
 import { useTranslation } from "react-i18next";
@@ -12,11 +12,21 @@ const NavbarMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedLanguageCode, setSelectedLanguageCode] = useState("en");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
+  const handleClickOutsideMenu = (event) => {
+    // Check if the click was outside the menu
+    if (
+      menuOpen &&
+      menuRef.current &&
+      !menuRef.current.contains(event.target)
+    ) {
+      setMenuOpen(false);
+    }
+  };
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
     setSelectedLanguageCode(lang);
@@ -35,8 +45,16 @@ const NavbarMain = () => {
     };
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("mousedown", handleClickOutsideMenu);
+
+    return () => {
+      window.removeEventListener("mousedown", handleClickOutsideMenu);
+    };
+  }, [menuOpen]);
+
   return (
-    <nav className="max-w-[1300px] mx-auto w-full px-4 mt-2 fixed top-0 left-0 right-0 z-20">
+    <nav className="max-w-[1300px] mx-auto w-full px-4 sm:px-0 mt-2 fixed top-0 left-0 right-0 z-20">
       <div className="flex justify-between items-center bg-black p-4 rounded-lg rounded-l-full rounded-r-full border-orange border-[0.5px]">
         <NavbarLogo />
         <LanguageSwitcher
@@ -59,7 +77,10 @@ const NavbarMain = () => {
 
       {/* Navbar Links for Mobile */}
       {menuOpen && (
-        <div className="bg-black text-center rounded-lg border-orange border mt-2 flex flex-col w-full lg:hidden">
+        <div
+          ref={menuRef}
+          className="bg-black text-center rounded-lg border-orange border mt-2 flex flex-col w-full lg:hidden"
+        >
           <NavbarLinks isMobile={isMobile} />
         </div>
       )}
