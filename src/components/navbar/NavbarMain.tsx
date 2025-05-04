@@ -81,7 +81,10 @@ const NavbarMain = () => {
           ref={menuRef}
           className="bg-black text-center rounded-lg border-orange border mt-2 flex flex-col w-full lg:hidden"
         >
-          <NavbarLinks isMobile={isMobile} />
+          <NavbarLinks
+            isMobile={isMobile}
+            onLinkClick={() => setMenuOpen(false)}
+          />
         </div>
       )}
     </nav>
