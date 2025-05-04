@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const FooterMain = () => {
   const { t } = useTranslation();
+
   return (
     <div className="px-4">
       <div className="w-full h-[1px] bg-lightGrey mt-24"></div>

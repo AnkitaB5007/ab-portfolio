@@ -23,7 +23,8 @@
     "aboutMe_text": "About Me",
     "aboutMe_text_intro": "I'm Arpita, a web developer on a mission to make the internet a bit more delightful—one line of code at a time! Armed with a keyboard, creativity, and a healthy appetite for pizza, I thrive in the world of pixels and programming while continuously learning and exploring. I believe that laughter can tackle any tricky bug, and I aim to create websites that leave users grinning.",
     "aboutMe_text_connect": "Let’s team up and craft something exceptional together, all while keeping the fun alive!",
-    "aboutMe_btn_projects": "My Projects"
+    "aboutMe_btn_text_projects": "My Projects",
+    "aboutMe_btn_link_projects": "Projects"
   },
   "footer": {
     "footer_link_about": "About Me",

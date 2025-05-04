@@ -26,7 +26,7 @@ const HeroText = () => {
         Arpita Behura
       </motion.h1>
       <motion.div
-        className="hero-text text-left md:text-center"
+        className="hero-text text-left"
         variants={fadeIn("up", 0.6)}
         initial="hidden"
         whileInView="show"
