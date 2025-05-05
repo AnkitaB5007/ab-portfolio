@@ -4,8 +4,7 @@
     "nav_link_skills": "Skills",
     "nav_link_experience": "Experience",
     "nav_link_projects": "Projects",
-    "nav_link_contact": "Contact",
-    "nav_btn_hire": "Hire Me"
+    "nav_btn_hire": "Contact Me"
   },
   "heroSection": {
     "hero_text_designation": "Full-Stack Web Developer",
@@ -43,8 +42,8 @@
     "contact": "Contact",
     "contactMe_text": "Contact Me",
     "contactMe_text_connect": "Get In Touch",
-    "contactMe_text_connect_shortDesc1": "Feel free to reach out if you’d like to collaborate",
-    "contactMe_text_connect_shortDesc2": "you are just a few clicks away!",
+    "contactMe_text_connect_shortDesc1": "Feel free to reach out if you’d like to collaborate.",
+    "contactMe_text_connect_shortDesc2": "You are just a few clicks away!",
     "contactMe_form_placeholder_name": "Your Name",
     "contactMe_form_placeholder_email": "Your Email",
     "contactMe_form_placeholder_message": "Your Message",
@@ -66,7 +65,7 @@
       "description": "leveraging best practices to create scalable and maintainable solutions.",
       "handsOnExperience": "Additionally, I have hands-on experience with",
       "backendTechnology": "Node.js,",
-      "understanding": "enabling me to understand and contribute to both frontend and backend systems effectively.",
+      "understanding": " enabling me to understand and contribute to both frontend and backend systems effectively.",
       "overallExperience": "My experience spans a variety of projects, from small business websites to complex",
       "projectType": "web applications",
       "codeQuality": "where I consistently prioritize clean code and exceptional user experiences.",
@@ -120,7 +119,7 @@
         "job": "Senior Test Analyst",
         "company": "Cognizant Technology Solutions",
         "location": "India",
-        "date": "2018 - 2019",
+        "date": "2011 - 2018",
         "responsibilities": [
           "Performed ETL Testing",
           "Identified business flows and defined Test Strategy",
@@ -134,6 +133,6 @@
   "projectsSection": {
     "projects_text": "Projects",
     "projects_shortDesc": "I have worked on a variety of web development projects, ranging from responsive websites for small businesses to full-stack applications and complex front-end interfaces.",
-    "projects_btn_view": "View"
+    "projects_btn_view": "Github"
   }
 }
