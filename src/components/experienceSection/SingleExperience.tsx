@@ -1,4 +1,4 @@
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Experience } from "../../constants/experienceData";
 import React from "react";
 
