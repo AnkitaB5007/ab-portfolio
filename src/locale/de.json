@@ -4,11 +4,10 @@
     "nav_link_skills": "Fähigkeiten",
     "nav_link_experience": "Erfahrung",
     "nav_link_projects": "Projekte",
-    "nav_link_contact": "Kontakt",
-    "nav_btn_hire": "Beauftrage mich"
+    "nav_btn_hire": "Kontaktiere mich"
   },
   "heroSection": {
-    "hero_text_designation": "Full-Stack Web-Entwickler",
+    "hero_text_designation": "Full-Stack Web-Entwicklerin",
     "hero_text_tagline_1": "Zum Leben",
     "hero_text_tagline_2": "durch Erweckung",
     "hero_text_tagline_3": "dynamische Kreationen!",
@@ -21,8 +20,8 @@
   },
   "aboutMeSection": {
     "aboutMe_text": "Über mich",
-    "aboutMe_text_intro": "Ich bin Arpita, ein Webentwickler mit der Mission, das Internet ein bisschen erfreulicher zu gestalten – eine Codezeile nach der anderen! Bewaffnet mit einer Tastatur, Kreativität und einem gesunden Appetit auf Pizza blühe ich in der Welt der Pixel und Programmierung auf, während ich stetig lerne und erkunde. Ich glaube, dass Lachen jeden kniffligen Fehler bewältigen kann, und ich möchte Websites erstellen, die die Nutzer zum Grinsen bringen",
-    "aboutMe_text_connect": "Lass uns zusammenarbeiten und etwas Außergewöhnliches kreieren, während wir den Spaß am Leben halten!",
+    "aboutMe_text_intro": "Ich bin Arpita, eine Webentwicklerin, die es sich zur Aufgabe gemacht hat, das Internet ein bisschen reizvoller zu machen - eine Codezeile nach der anderen! Bewaffnet mit einer Tastatur, Kreativität und einem gesunden Appetit auf Pizza, fühle ich mich in der Welt der Pixel und des Programmierens wohl und lerne und erforsche ständig dazu. Ich glaube, dass man mit Lachen jeden noch so kniffligen Fehler beheben kann, und ich möchte Websites erstellen, die die Benutzer zum Grinsen bringen.",
+    "aboutMe_text_connect": "Lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen und dabei den Spaß am Leben erhalten!",
     "aboutMe_btn_text_projects": "Meine Projekte",
     "aboutMe_btn_link_projects": "Projekte"
   },
@@ -37,13 +36,13 @@
   "skillsSection": {
     "skills": "Fähigkeiten",
     "skills_text": "Meine Fähigkeiten",
-    "skills_text_shortDesc": "Ich arbeite nicht nur mit diesen Technologien, sondern bin auch ausgezeichnet darin, sie mit den besten Praktiken zu nutzen, um hochwertige Ergebnisse zu liefern. Ich arbeite mit all diesen Fähigkeiten, um meine Portfolio-Projekte zu erstellen."
+    "skills_text_shortDesc": "Ich arbeite nicht nur mit diesen Technologien, sondern auch mit den besten Praktiken, um qualitativ hochwertige Ergebnisse zu liefern. Ich habe mit all diesen Fähigkeiten gearbeitet, um meine Portfolio-Projekte aufzubauen."
   },
   "contactMeSection": {
     "contact": "Kontakt",
     "contactMe_text": "Kontaktiere mich",
     "contactMe_text_connect": "Nehmen Sie Kontakt auf",
-    "contactMe_text_connect_shortDesc1": "Fühlen Sie sich frei, sich zu melden, wenn Sie zusammenarbeiten möchten -",
+    "contactMe_text_connect_shortDesc1": "Sprechen Sie uns an, wenn Sie mit uns zusammenarbeiten möchten.",
     "contactMe_text_connect_shortDesc2": "Sie sind nur ein paar Klicks entfernt!",
     "contactMe_form_placeholder_name": "Ihr Name",
     "contactMe_form_placeholder_email": "Ihre E-Mail",
@@ -55,22 +54,22 @@
     "experience_text_since_year": "Seit 2022",
     "experience_text_years": "Jahre",
     "experience_text_websites": "Websites",
-    "experience_text_shortDesc": "Mit 4 Jahren Erfahrung in der Erstellung dynamischer und benutzerfreundlicher Webanwendungen.",
+    "experience_text_shortDesc": "Mit 4 Jahren Erfahrung in der Entwicklung dynamischer und benutzerfreundlicher Webanwendungen.",
     "experience_text_customers": "Kunden",
     "experience_text_new_users_monthly": "Neue Benutzer monatlich",
     "experience_text_logins_per_month": "Logins pro Monat",
-    "experience_text_shortDesc_note": "*In meinem aktuellen Unternehmen (im Bankwesen tätig)",
+    "experience_text_shortDesc_note": "*In meinem derzeitigen Unternehmen (das im Bankenbereich tätig ist)",
     "experienceDetails_text": {
       "specialization": "Ich spezialisiere mich auf",
       "technologies": "React, Angular, Next JS und modernes JavaScript",
-      "description": "nutzbare Best Practices, um skalierbare und wartbare Lösungen zu schaffen.",
-      "handsOnExperience": "Zusätzlich habe ich praktische Erfahrungen mit",
+      "description": "und nutze Best Practices, um skalierbare und wartbare Lösungen zu erstellen.",
+      "handsOnExperience": "Darüber hinaus habe ich praktische Erfahrung mit ",
       "backendTechnology": "Node.js,",
-      "understanding": "was es mir ermöglicht, sowohl Frontend- als auch Backend-Systeme effektiv zu verstehen und daran mitzuwirken.",
-      "overallExperience": "Meine Erfahrung erstreckt sich über eine Vielzahl von Projekten, von kleinen Unternehmenswebsites bis hin zu komplexen",
-      "projectType": "Webanwendungen",
-      "codeQuality": "wo ich konsequent Wert auf sauberen Code und außergewöhnliche Benutzererfahrungen lege.",
-      "integration": "Durch die Überbrückung der Kluft zwischen Frontend- und Backend-Entwicklung sorge ich für nahtlose Funktionalität und Integration über alle Ebenen der Anwendung."
+      "understanding": " was es mir ermöglicht, sowohl Frontend- als auch Backend-Systeme zu verstehen und effektiv zu ihnen beizutragen.",
+      "overallExperience": "Meine Erfahrung umfasst eine Vielzahl von Projekten, von kleinen Unternehmenswebsites bis hin zu komplexen",
+      "projectType": "Webanwendungen,",
+      "codeQuality": " bei denen ich stets sauberen Code und außergewöhnliche Benutzererfahrungen priorisiere.",
+      "integration": "Durch die Überbrückung der Lücke zwischen Frontend- und Backend-Entwicklung stelle ich nahtlose Funktionalität und Integration über alle Schichten der Anwendung sicher."
     },
     "experienceAllYearCategorization": [
       {
@@ -79,12 +78,12 @@
         "location": "Stuttgart",
         "date": "2024 - Gegenwart",
         "responsibilities": [
-          "Benutzeroberflächenfunktionen mit JavaScript-Frameworks erstellen",
-          "Responsive, mobilfreundliche Designs erstellen",
-          "Komponentenstatus verwalten",
-          "Serverseitige Logik mit Node.js entwickeln",
-          "API-Entwicklung verwalten",
-          "Datenbanken verwalten",
+          "Erstellung von benutzerfreundlichen Funktionen mit JavaScript-Frameworks",
+          "Erstellen von reaktionsfähigen, mobilfreundlichen Designs",
+          "Verwalten von Komponentenzuständen",
+          "Entwicklung von serverseitiger Logik mit Node.js",
+          "Handhabung der API-Entwicklung",
+          "Verwalten von Datenbanken",
           "Testen und Debuggen"
         ]
       },
@@ -95,10 +94,10 @@
         "date": "2022 - 2023",
         "responsibilities": [
           "Wiederverwendbare Komponenten implementiert",
-          "Daten von Backend-APIs abgerufen und angezeigt",
-          "An großen Anwendungen teilgenommen",
-          "An der Leistung von Webanwendungen gearbeitet",
-          "Neue Ideen für eine bessere Benutzererfahrung generiert"
+          "Abrufen und Anzeigen von Daten aus Backend-APIs",
+          "Beteiligung an groß angelegten Anwendungen",
+          "Arbeitete an der Leistung von Webanwendungen",
+          "Generierung neuer Ideen für eine bessere Benutzerfreundlichkeit"
         ]
       },
       {
@@ -107,29 +106,29 @@
         "location": "Indien",
         "date": "2018 - 2019",
         "responsibilities": [
-          "Responsive, barrierefreie und browserkompatible Webseiten entwickelt",
-          "UI/UX-Designs (häufig von Figma oder Adobe XD) in vollständige funktionale Webkomponenten und Layouts übersetzt",
-          "Probleme, die von QA oder Benutzern gemeldet wurden, identifiziert und Frontend-Bugs behoben"
+          "Entwicklung von responsiven, barrierefreien und browserübergreifend kompatiblen Webseiten",
+          "Umsetzung von UI/UX-Entwürfen (oft aus Figma oder Adobe XD) in voll funktionsfähige Webkomponenten und Layouts",
+          "Identifizierung von Problemen, die von QA oder Benutzern gemeldet wurden, und Behebung von Frontend-Fehlern"
         ]
       },
       {
         "job": "Senior Test Analyst",
         "company": "Cognizant Technology Solutions",
         "location": "Indien",
-        "date": "2018 - 2019",
+        "date": "2011 - 2018",
         "responsibilities": [
-          "ETL-Tests durchgeführt",
-          "Geschäftsabläufe identifiziert und Teststrategien definiert",
-          "Testfälle entwickelt",
-          "Bugs/Defekte verfolgt",
-          "Datenvergleiche zwischen Quelle und Ziel durchgeführt"
+          "Durchgeführte ETL-Tests",
+          "Identifizierung der Geschäftsabläufe und Definition der Teststrategie",
+          "Entwickelte Testfälle",
+          "Verfolgung von Fehlern/Mängeln",
+          "Durchführen von Datenvergleichen zwischen Quelle und Ziel"
         ]
       }
     ]
   },
   "projectsSection": {
     "projects_text": "Projekte",
-    "projects_shortDesc": "Ich habe an einer Vielzahl von Webentwicklungsprojekten gearbeitet, von responsiven Websites für kleine Unternehmen bis hin zu Full-Stack-Anwendungen und komplexen Front-End-Oberflächen.",
-    "projects_btn_view": "Ansehen"
+    "projects_shortDesc": "Ich habe an einer Vielzahl von Webentwicklungsprojekten gearbeitet, die von responsiven Websites für kleine Unternehmen bis hin zu vollständigen Anwendungen und komplexen Front-End-Schnittstellen reichen.",
+    "projects_btn_view": "Github"
   }
 }
