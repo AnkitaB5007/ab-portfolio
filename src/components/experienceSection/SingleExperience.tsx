@@ -9,7 +9,7 @@ interface SingleExperienceProps {
 const SingleExperience: React.FC<SingleExperienceProps> = ({ experience }) => {
   return (
     <motion.div
-      className="md:h-[400px] md:w-[300px] sm:h-auto sm:w-full border-2 border-orange border-dashed
+      className="md:h-[450px] md:w-[300px] sm:h-auto sm:w-full border-2 border-orange border-dashed
         rounded-2xl mt-12 p-2"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

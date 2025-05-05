@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 const ExperienceTopRight = () => {
   const { t } = useTranslation();
   return (
-    <div className="xl:w-[25%] lg:w-[30%] border border-lightBrown p-4 rounded-xl">
-      <p className="text-lg text-center text-lightGrey">
+    <div className="border border-lightBrown p-4 rounded-xl">
+      <p className="text-lg text-center text-lightGrey md:leading-8">
         {t("experienceSection.experienceDetails_text.specialization")}{" "}
         <span className="font-bold text-white">
           {t("experienceSection.experienceDetails_text.technologies")}
