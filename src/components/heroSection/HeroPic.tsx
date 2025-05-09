@@ -12,7 +12,8 @@ const HeroPic = () => {
       viewport={{ once: false, amount: 0 }}
     >
       <img
-        src="/images/HexaPic.jpeg"
+        // src="/images/HexaPic.jpeg"
+        src="/images/pop_pic.jpg"
         alt="arpita"
         className="w-[80%] max-w-[300px] h-auto"
       />
