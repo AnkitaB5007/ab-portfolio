@@ -8,9 +8,10 @@
   },
   "heroSection": {
     "hero_text_designation": "Full-Stack Web-Entwicklerin",
-    "hero_text_tagline_1": "Zum Leben",
-    "hero_text_tagline_2": "durch Erweckung",
-    "hero_text_tagline_3": "dynamische Kreationen!",
+    "hero_text_tagline_0": "",
+    "hero_text_tagline_1": "durch",
+    "hero_text_tagline_2": "dynamische Kreationen",
+    "hero_text_tagline_3": "zum Leben erwecken!",
     "hero_text_slide_1": "Konzepte",
     "hero_text_slide_2": "Ideen",
     "hero_text_slide_3": "Designs",
