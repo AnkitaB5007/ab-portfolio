@@ -17,37 +17,67 @@ interface BlogPost {
 const BlogsSection = () => {
   const { t } = useTranslation();
 
-  // Sample blog posts - replace with your actual blog data
+  // Your actual blog posts from personal-blog repository
   const blogPosts: BlogPost[] = [
     {
       id: 1,
-      title: "Getting Started with Machine Learning in 2024",
-      excerpt: "A comprehensive guide to starting your ML journey with practical examples and real-world applications.",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      tags: ["Machine Learning", "AI", "Python"],
-      link: "https://your-blog-url.com/ml-guide-2024",
-      image: "/images/blog-1.jpg"
+      title: "What is DevOps? A Beginner's Guide",
+      excerpt: "An overview of DevOps principles, best practices, and how to implement them in your projects using Python and GitHub Actions.",
+      date: "2025-06-10",
+      readTime: "8 min read",
+      tags: ["DevOps", "CI/CD", "Python"],
+      link: "https://behura.com/posts/what-is-devops", // Update with your actual blog URL
+      image: "/blog-images/devops-cover.jpg"
     },
     {
       id: 2,
-      title: "Building Scalable Web Applications with React",
-      excerpt: "Best practices and patterns for creating maintainable React applications that scale with your business.",
-      date: "2024-02-20",
-      readTime: "8 min read",
-      tags: ["React", "JavaScript", "Web Development"],
-      link: "https://your-blog-url.com/react-scalable-apps",
-      image: "/images/blog-2.jpg"
+      title: "Linux Users and Groups Management",
+      excerpt: "A technical reference for understanding and managing Linux user groups and file permissions, including commands, best practices, and security tips.",
+      date: "2025-07-18",
+      readTime: "12 min read",
+      tags: ["Linux", "System Administration", "Security"],
+      link: "https://behura.com/posts/linux-users-and-groups",
+      image: "/blog-images/linux-users.jpg"
     },
     {
       id: 3,
-      title: "Data Science Pipeline: From Raw Data to Insights",
-      excerpt: "Learn how to build end-to-end data pipelines that transform raw data into actionable business insights.",
-      date: "2024-03-10",
-      readTime: "12 min read",
-      tags: ["Data Science", "Python", "Analytics"],
-      link: "https://your-blog-url.com/data-science-pipeline",
-      image: "/images/blog-3.jpg"
+      title: "Understanding OSI and TCP/IP Models",
+      excerpt: "Deep dive into networking fundamentals - comparing OSI and TCP/IP models, their layers, and how data flows through network protocols.",
+      date: "2025-07-08",
+      readTime: "10 min read",
+      tags: ["Networking", "OSI", "TCP/IP"],
+      link: "https://behura.com/posts/understand-osi-tcp-models",
+      image: "/blog-images/osi-vs-tcp.jpg"
+    },
+    {
+      id: 4,
+      title: "Ports and Protocols in Networking",
+      excerpt: "Comprehensive guide to network ports, protocols, and how they work together to enable communication in distributed systems.",
+      date: "2025-07-08",
+      readTime: "9 min read",
+      tags: ["Networking", "Protocols", "Infrastructure"],
+      link: "https://behura.com/posts/ports-and-protocols",
+      image: "/blog-images/ports-protocols.jpg"
+    },
+    {
+      id: 5,
+      title: "Understanding Messages in LLM Chat Interfaces",
+      excerpt: "Explore how Large Language Models process and respond to messages in chat interfaces, including prompt engineering and conversation context.",
+      date: "2025-07-02",
+      readTime: "7 min read",
+      tags: ["AI", "LLM", "Machine Learning"],
+      link: "https://behura.com/posts/what-are-messages-in-llm-chat-interfaces",
+      image: "/blog-images/llm-chat.jpg"
+    },
+    {
+      id: 6,
+      title: "Debug Docker Basics",
+      excerpt: "Essential Docker debugging techniques, common issues, and troubleshooting strategies for containerized applications.",
+      date: "2025-07-01",
+      readTime: "6 min read",
+      tags: ["Docker", "DevOps", "Containers"],
+      link: "https://behura.com/posts/debug-docker-basics",
+      image: "/blog-images/docker-debug.jpg"
     }
   ];
 
@@ -160,7 +190,7 @@ const BlogsSection = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <a
-          href="https://your-blog-url.com"
+          href="https://behura.com/blog" // Update this to your actual blog URL
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
