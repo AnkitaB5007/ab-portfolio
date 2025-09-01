@@ -5,9 +5,9 @@ import SubHeroSection from "./components/heroSection/SubHeroSection";
 import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
-import ExperienceMain from "./components/experienceSection/ExperienceMain";
+import CVSection from "./components/cvSection/CVSection";
 import ProjectsMain from "./components/projectsSection/ProjectsMain";
-import ContactMeMain from "./components/contactMeSection/ContactMeMain";
+import BlogsSection from "./components/blogsSection/BlogsSection";
 import FooterMain from "./components/footer/FooterMain";
 import ProgressBarMain from "./components/progressbarSection/ProgressBarMain";
 import "./i18n";
@@ -23,9 +23,9 @@ function App() {
       <AboutMeMain />
       <SkillsMain />
       <SubSkills />
-      <ExperienceMain />
+      <CVSection />
       <ProjectsMain />
-      <ContactMeMain />
+      <BlogsSection />
       <FooterMain />
     </main>
   );

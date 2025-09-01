@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher";
 import { requiredLanguages } from "../../constants/languageSwitcherData";
 import { useTranslation } from "react-i18next";
-import NavbarBtn from "./NavbarBtn";
 
 const NavbarMain = () => {
   const { i18n } = useTranslation();
@@ -57,12 +56,7 @@ const NavbarMain = () => {
     <nav className="max-w-[1300px] mx-auto w-full px-4 sm:px-0 mt-2 fixed top-0 left-0 right-0 z-20">
       <div className="flex justify-between items-center bg-black p-4 rounded-lg rounded-l-full rounded-r-full border-orange border-[0.5px]">
         <NavbarLogo />
-        <LanguageSwitcher
-          requiredLanguages={requiredLanguages}
-          onSelectionChange={handleLanguageChange}
-          selectedLanguageCode={selectedLanguageCode}
-        />
-
+        
         {/* Hamburger Menu for Mobile */}
         <button className="text-2xl lg:hidden text-white" onClick={toggleMenu}>
           <GiHamburgerMenu />
@@ -75,7 +69,12 @@ const NavbarMain = () => {
             onLinkClick={() => setMenuOpen(false)}
           />
         </div>
-        <NavbarBtn />
+        
+        <LanguageSwitcher
+          requiredLanguages={requiredLanguages}
+          onSelectionChange={handleLanguageChange}
+          selectedLanguageCode={selectedLanguageCode}
+        />
       </div>
 
       {/* Navbar Links for Mobile */}

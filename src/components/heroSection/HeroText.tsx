@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
-import { words } from "../../constants/heroData";
 import { useTranslation } from "react-i18next";
 
 const HeroText = () => {
@@ -24,7 +23,7 @@ const HeroText = () => {
         </h1>
       </motion.div>
 
-      {/* Dynamic Role */}
+      {/* Static Role */}
       <motion.h2
         className="text-xl md:text-2xl lg:text-3xl font-medium text-slate-300"
         variants={fadeIn("right", 0.4)}
@@ -35,7 +34,7 @@ const HeroText = () => {
         {t("heroSection.hero_text_designation")}
       </motion.h2>
 
-      {/* Animated Tagline */}
+      {/* Simple Static Tagline */}
       <motion.div
         className="text-lg md:text-xl lg:text-2xl text-slate-400 leading-relaxed max-w-2xl"
         variants={fadeIn("up", 0.6)}
@@ -44,26 +43,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
       >
         <p>
-          {t("heroSection.hero_text_tagline_1")}{" "}
-          <span className="inline-flex items-center relative overflow-hidden h-8 md:h-10">
-            <span className="wrapper text-cyan-400 font-semibold">
-              {words.map((word) => (
-                <span
-                  key={t(`heroSection.${word.slideText}`)}
-                  className="flex items-center gap-2 pb-1"
-                >
-                  <img
-                    src={word.imgPath}
-                    alt={t(`heroSection.${word.slideText}`)}
-                    className="w-6 h-6 md:w-8 md:h-8 p-1 rounded-lg bg-white/10"
-                  />
-                  <span>{t(`heroSection.${word.slideText}`)}</span>
-                </span>
-              ))}
-            </span>
-          </span>
-          <br />
-          {t("heroSection.hero_text_tagline_2")} <span className="text-amber-400 font-semibold">{t("heroSection.hero_text_tagline_3")}</span>
+          Bringing data and algorithms to life through intelligent solutions.
         </p>
       </motion.div>
 

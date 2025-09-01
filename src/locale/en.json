@@ -2,9 +2,9 @@
 "navBar": {
 "nav_link_about": "About Me",
 "nav_link_skills": "Skills",
-"nav_link_experience": "Experience",
+"nav_link_cv": "CV",
 "nav_link_projects": "Projects",
-"nav_btn_hire": "Contact Me"
+"nav_link_blogs": "Blogs"
 },
 "heroSection": {
 "hero_text_designation": "AI & Machine Learning Engineer",
@@ -100,7 +100,18 @@
 }
 ]
 },
-"projectsSection": {
+  "cvSection": {
+    "cv_text": "CV",
+    "cv_title": "Download My Resume",
+    "cv_description": "Get a detailed overview of my professional experience, education, skills, and achievements in a comprehensive PDF format.",
+    "cv_download_btn": "Download CV",
+    "cv_last_updated": "March 2024"
+  },
+  "blogsSection": {
+    "blogs_text": "Blogs",
+    "blogs_description": "Sharing insights, tutorials, and thoughts on technology, development, and industry trends through my writing."
+  },
+  "projectsSection": {
 "projects_text": "Projects",
 "projects_shortDesc": "I have worked on a variety of machine learning projects, ranging from data analysis and model training to full-stack applications with AI components. Each project demonstrates my commitment to clean code, performance optimization, and technical excellence.",
 "projects_btn_view": "Github"
