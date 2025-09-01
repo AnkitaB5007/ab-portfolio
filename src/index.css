@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 body {
-  @apply bg-darkBrown;
+  @apply bg-slate-950 text-white;
+  font-family: 'Inter', sans-serif;
 }
 
 .white-bg {
@@ -11,8 +12,8 @@ body {
 }
 
 @theme {
-  --font-body: "Josefin Sans", "sans-serif";
-  --font-special: "Nunito", "sans-serif";
+  --font-body: "Inter", "sans-serif";
+  --font-special: "JetBrains Mono", "monospace";
 
   --sm: "350px";
   --md: "768px";
@@ -20,20 +21,27 @@ body {
   --xl: "1280px";
   --2xl: "1536px";
 
-  --color-brown: #53423e;
-  --color-lightBrown: #645550;
-  --color-darkBrown: #2c2523;
-  --color-black: #1e1917;
-  --color-white: #f1e1d9;
-  --color-cyan: #15d1e9;
-  --color-lightCyan: #88e5f0;
-  --color-darkCyan: #009fb3;
-  --color-orange: #fb9718;
-  --color-lightOrange: #fac27b;
-  --color-darkOrange: #d28422;
-  --color-grey: #626965;
-  --color-lightGrey: #978580;
-  --color-darkGrey: #3f4441;
+  /* Modern Color Palette */
+  --color-primary: #3b82f6;
+  --color-secondary: #06b6d4;
+  --color-accent: #f59e0b;
+  --color-success: #10b981;
+  
+  /* Updated colors for modern look */
+  --color-brown: #374151;
+  --color-lightBrown: #6b7280;
+  --color-darkBrown: #111827;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-cyan: #06b6d4;
+  --color-lightCyan: #67e8f9;
+  --color-darkCyan: #0891b2;
+  --color-orange: #f59e0b;
+  --color-lightOrange: #fbbf24;
+  --color-darkOrange: #d97706;
+  --color-grey: #6b7280;
+  --color-lightGrey: #9ca3af;
+  --color-darkGrey: #374151;
 }
 
 @layer utilities {
