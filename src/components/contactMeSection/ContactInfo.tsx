@@ -8,9 +8,9 @@ const ContactInfo = () => {
     <div className="hidden sm:flex flex-col gap-4">
       {" "}
       {/* Hide on small devices */}
-      <SingleInfo text="arpitabehura.009@gmail.com" Image={HiOutlineMail} />
-      <SingleInfo text="+49 1514 6938608" Image={FiPhone} />
-      <SingleInfo text="Bergisch Gladbach, Germany" Image={IoLocationOutline} />
+      <SingleInfo text="ankitabehura@gmail.com" Image={HiOutlineMail} />
+      <SingleInfo text="+49 155 10209356" Image={FiPhone} />
+      <SingleInfo text="Riegelsberg, 66292, Germany" Image={IoLocationOutline} />
     </div>
   );
 };

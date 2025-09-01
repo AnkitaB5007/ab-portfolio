@@ -8,31 +8,31 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        name: "shopping-list-app",
-        year: "Apr2024",
-        align: "right",
-        image: "/images/website-img-3.jpg",
-        link: "https://github.com/arpita009/shopping-list-app",
-    },
-    {
-        name: "quiz-app",
-        year: "May2024",
-        align: "left",
-        image: "/images/website-img-4.jpg",
-        link: "https://github.com/arpita009/quiz-app",
-    },
-    {
-        name: "chocolate-calendar",
-        year: "Jan2022",
+        name: "your-project-1",
+        year: "2024",
         align: "right",
         image: "/images/website-img-1.jpg",
-        link: "https://github.com/arpita009/chocolate-calendar",
+        link: "https://github.com/your-username/your-project-1",
     },
     {
-        name: "findingfalconeReactRedux",
-        year: "Jan2022",
+        name: "your-project-2",
+        year: "2024",
         align: "left",
         image: "/images/website-img-2.webp",
-        link: "https://github.com/arpita009/findingfalconeReactRedux",
+        link: "https://github.com/your-username/your-project-2",
+    },
+    {
+        name: "your-project-3",
+        year: "2023",
+        align: "right",
+        image: "/images/website-img-3.jpg",
+        link: "https://github.com/your-username/your-project-3",
+    },
+    {
+        name: "your-project-4",
+        year: "2023",
+        align: "left",
+        image: "/images/website-img-4.jpg",
+        link: "https://github.com/your-username/your-project-4",
     },
 ];

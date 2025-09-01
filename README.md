@@ -1,54 +1,114 @@
-# React + TypeScript + Vite
+# Ankita Behura - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Vite. This portfolio showcases my skills, experience, and projects with a beautiful UI and smooth animations.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Design**: Clean and professional layout with a dark theme
+- **Responsive**: Fully responsive design that works on all devices
+- **Multilingual**: Support for English and German languages
+- **Interactive**: Smooth animations and transitions using Framer Motion
+- **Contact Form**: Functional contact form using EmailJS
+- **TypeScript**: Fully typed for better development experience
+- **Fast**: Built with Vite for lightning-fast development and builds
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend Framework**: React 19
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Internationalization**: react-i18next
+- **Contact Form**: EmailJS
+- **Smooth Scrolling**: react-scroll
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/ab-portfolio.git
+cd ab-portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Set up environment variables:
+Create a `.env` file in the root directory and add your EmailJS credentials:
+```env
+VITE_APP_EMAILJS_SERVICE_ID=your_service_id
+VITE_APP_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_APP_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 📝 Customization Guide
+
+### Personal Information
+1. Update contact details in `src/components/contactMeSection/ContactInfo.tsx`
+2. Update social media links in `src/components/contactMeSection/ContactSocial.tsx`
+3. Update content in `src/locale/en.json` and `src/locale/de.json`
+
+### Experience & Projects
+1. Update your work experience in `src/locale/en.json` under `experienceAllYearCategorization`
+2. Update your projects in `src/constants/projectsData.ts`
+3. Update your skills in `src/constants/skillsData.ts`
+
+### Images
+Replace images in the `public/images/` directory with your own:
+- `about-me.jpg` - Your profile picture
+- `HexaPic.jpeg` - Alternative profile picture
+- `website-img-*.jpg` - Your project screenshots
+
+## 📱 Sections
+
+- **Hero**: Introduction and animated text
+- **About Me**: Personal introduction and call-to-action
+- **Skills**: Technical skills with icons
+- **Experience**: Work history and achievements
+- **Projects**: Portfolio projects with GitHub links
+- **Contact**: Contact form and information
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy automatically on every push
+
+### Netlify
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to Netlify
+3. Add environment variables in Netlify dashboard
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio!
+
+## 📞 Contact
+
+- Email: your.email@gmail.com
+- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
+- GitHub: [Your GitHub Profile](https://github.com/your-username)
