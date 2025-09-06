@@ -7,7 +7,7 @@ tags: ["OSI", "Networking", "DevOps"]
 categories: ["Networking"]
 ---
 
-![OSI Model](/uploads/OSI.jpg)
+![OSI Model](/blog-images/OSI.jpg)
 
 The OSI (Open Systems Interconnection) Model defines how data moves through a network, from one device to another. It has seven layers, each with specific functions. Let's explore the key layers covered in this post.
 

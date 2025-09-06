@@ -2,84 +2,15 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import { useTranslation } from "react-i18next";
 import { FiExternalLink, FiCalendar, FiClock } from "react-icons/fi";
-
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  link: string;
-  image: string;
-}
+import { Link } from "react-router-dom";
+import { getAllBlogPosts } from "../../utils/blogLoader";
 
 const BlogsSection = () => {
   const { t } = useTranslation();
 
-  // Your actual blog posts from personal-blog repository
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: "What is DevOps? A Beginner's Guide",
-      excerpt: "An overview of DevOps principles, best practices, and how to implement them in your projects using Python and GitHub Actions.",
-      date: "2025-06-10",
-      readTime: "8 min read",
-      tags: ["DevOps", "CI/CD", "Python"],
-      link: "https://behura.com/posts/what-is-devops", // Update with your actual blog URL
-      image: "/blog-images/devops-cover.jpg"
-    },
-    {
-      id: 2,
-      title: "Linux Users and Groups Management",
-      excerpt: "A technical reference for understanding and managing Linux user groups and file permissions, including commands, best practices, and security tips.",
-      date: "2025-07-18",
-      readTime: "12 min read",
-      tags: ["Linux", "System Administration", "Security"],
-      link: "https://behura.com/posts/linux-users-and-groups",
-      image: "/blog-images/linux-users.jpg"
-    },
-    {
-      id: 3,
-      title: "Understanding OSI and TCP/IP Models",
-      excerpt: "Deep dive into networking fundamentals - comparing OSI and TCP/IP models, their layers, and how data flows through network protocols.",
-      date: "2025-07-08",
-      readTime: "10 min read",
-      tags: ["Networking", "OSI", "TCP/IP"],
-      link: "https://behura.com/posts/understand-osi-tcp-models",
-      image: "/blog-images/osi-vs-tcp.jpg"
-    },
-    {
-      id: 4,
-      title: "Ports and Protocols in Networking",
-      excerpt: "Comprehensive guide to network ports, protocols, and how they work together to enable communication in distributed systems.",
-      date: "2025-07-08",
-      readTime: "9 min read",
-      tags: ["Networking", "Protocols", "Infrastructure"],
-      link: "https://behura.com/posts/ports-and-protocols",
-      image: "/blog-images/ports-protocols.jpg"
-    },
-    {
-      id: 5,
-      title: "Understanding Messages in LLM Chat Interfaces",
-      excerpt: "Explore how Large Language Models process and respond to messages in chat interfaces, including prompt engineering and conversation context.",
-      date: "2025-07-02",
-      readTime: "7 min read",
-      tags: ["AI", "LLM", "Machine Learning"],
-      link: "https://behura.com/posts/what-are-messages-in-llm-chat-interfaces",
-      image: "/blog-images/llm-chat.jpg"
-    },
-    {
-      id: 6,
-      title: "Debug Docker Basics",
-      excerpt: "Essential Docker debugging techniques, common issues, and troubleshooting strategies for containerized applications.",
-      date: "2025-07-01",
-      readTime: "6 min read",
-      tags: ["Docker", "DevOps", "Containers"],
-      link: "https://behura.com/posts/debug-docker-basics",
-      image: "/blog-images/docker-debug.jpg"
-    }
-  ];
+  // Get your actual blog posts
+  const allBlogPosts = getAllBlogPosts();
+  const featuredPosts = allBlogPosts.slice(0, 6); // Show first 6 posts
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -110,7 +41,7 @@ const BlogsSection = () => {
       </motion.div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.map((post, index) => (
+        {featuredPosts.map((post, index) => (
           <motion.article
             key={post.id}
             className="bg-slate-800/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-slate-700/50 hover:border-cyan/50 transition-all duration-300 group"
@@ -127,9 +58,15 @@ const BlogsSection = () => {
                   {post.tags[0]}
                 </span>
               </div>
-              {/* Placeholder for blog image */}
+              {/* Dynamic icon based on post topic */}
               <div className="w-full h-full flex items-center justify-center">
-                <span className="text-6xl">📝</span>
+                <span className="text-6xl">
+                  {post.tags[0] === 'DevOps' ? '⚙️' :
+                   post.tags[0] === 'Linux' ? '🐧' :
+                   post.tags[0] === 'Networking' ? '🌐' :
+                   post.tags[0] === 'AI' ? '🤖' :
+                   post.tags[0] === 'Docker' ? '🐳' : '📝'}
+                </span>
               </div>
             </div>
 
@@ -151,7 +88,7 @@ const BlogsSection = () => {
               </h3>
               
               <p className="text-slate-400 mb-4 leading-relaxed">
-                {post.excerpt}
+                {post.summary}
               </p>
 
               {/* Tags */}
@@ -167,15 +104,13 @@ const BlogsSection = () => {
               </div>
 
               {/* Read More Button */}
-              <a
-                href={post.link}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={`/blog/${post.slug}`}
                 className="inline-flex items-center gap-2 text-cyan hover:text-white transition-colors duration-300 font-semibold"
               >
                 Read More
                 <FiExternalLink className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </motion.article>
         ))}
@@ -189,15 +124,13 @@ const BlogsSection = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
       >
-        <a
-          href="https://behura.com/blog" // Update this to your actual blog URL
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog"
           className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
         >
           View All Blogs
           <FiExternalLink className="w-5 h-5" />
-        </a>
+        </Link>
       </motion.div>
     </div>
   );

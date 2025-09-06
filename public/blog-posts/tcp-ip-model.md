@@ -9,7 +9,7 @@ categories: ["Networking"]
 
 The **TCP/IP model** (Transmission Control Protocol/Internet Protocol) is the foundation of modern networking. It is a four-layer framework that allows computers and devices to communicate reliably across different types of networks, including LANs, WANs, and the internet. TCP/IP makes it possible for different systems to work together, no matter what hardware or network technology they use.
 
-![TCP/IP Model](/uploads/osi-vs-tcp.jpg)
+![TCP/IP Model](/blog-images/osi-vs-tcp.jpg)
 *Image courtesy of GeeksforGeeks.*
 
 ---
@@ -65,6 +65,6 @@ Let's see what happens when you send and receive data over a network.
 
 Data in various layers of the TCP/IP model is encapsulated, meaning each layer adds its own header to the data. This encapsulation allows for efficient data transmission and ensures that each layer can perform its specific functions without needing to know the details of the other layers.
 
-![Data Encapsulation in various layers](/uploads/data-in-layers.jpg)
+![Data Encapsulation in various layers](/blog-images/data-in-layers.jpg)
 *Image courtesy of GeeksforGeeks.*
 

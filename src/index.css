@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
+/* Import highlight.js theme for syntax highlighting */
+@import "highlight.js/styles/atom-one-dark.css";
+
 body {
   @apply bg-slate-950 text-white;
   font-family: 'Inter', sans-serif;
@@ -125,4 +128,35 @@ body {
   87.5% {
     transform: translateY(-87.5%);
   }
+}
+
+/* Custom highlight.js styles for better integration */
+.hljs {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+  color: #06b6d4 !important;
+}
+
+.hljs-string,
+.hljs-attr {
+  color: #10b981 !important;
+}
+
+.hljs-function,
+.hljs-title {
+  color: #67e8f9 !important;
+}
+
+.hljs-comment {
+  color: #64748b !important;
+  font-style: italic;
 }
