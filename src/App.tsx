@@ -1,8 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavbarMain from "./components/navbar/NavbarMain";
-import HeroMain from "./components/heroSection/HeroMain";
-import HeroGradient from "./components/heroSection/HeroGradient";
-import SubHeroSection from "./components/heroSection/SubHeroSection";
 import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
@@ -20,15 +17,12 @@ const PortfolioLayout = () => (
   <>
     <ProgressBarMain />
     <NavbarMain />
-    <HeroMain />
-    <HeroGradient />
-    <SubHeroSection />
+    <BlogsSection />
     <AboutMeMain />
     <SkillsMain />
     <SubSkills />
     <CVSection />
     <ProjectsMain />
-    <BlogsSection />
     <FooterMain />
   </>
 );

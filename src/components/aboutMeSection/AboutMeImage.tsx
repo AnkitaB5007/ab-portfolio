@@ -1,12 +1,13 @@
 const AboutMeImage = () => {
     return (
-        <div className="h-[500px] w-[300px] relative">
-            <div className="h-[500px] w-[300px] rounded-[100px] absolute overflow-hidden">
-                <img src="/images/about-me.png" alt="about-me" className="h-full w-auto object-cover" />
-            </div>
-            <div className="h-[500px] w-[250px] bg-orange absolute bottom-[-30px]
-            left-[-30px] rounded-bl-[120px] rounded-tr-[120px] rounded-br-[20px] rounded-tl-[20px] -z-10">
-
+        <div className="relative max-w-sm mx-auto">
+            <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                    src="/images/about-me.png" 
+                    alt="about-me" 
+                    className="w-full h-auto object-cover filter grayscale hover:grayscale-0 transition-all duration-500" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
             </div>
         </div>
     );
