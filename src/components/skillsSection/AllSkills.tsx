@@ -1,22 +1,14 @@
 import SingleSkill from "./SingleSkill";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
 import { skills } from "../../constants/skillsData";
 
 const AllSkills = () => {
   return (
-    <div className="flex items-center justify-center relative gap-2 max-w-[1200px]">
+    <div className="flex flex-wrap items-center justify-center gap-8 max-w-4xl mx-auto">
       {skills.map((item, index) => {
         return (
-          <motion.div
-            variants={fadeIn("up", index * 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0 }}
-            key={index}
-          >
-            <SingleSkill key={index} text={item.skill} imgSvg={<item.icon />} />
-          </motion.div>
+          <div key={index}>
+            <SingleSkill text={item.skill} imgSvg={<item.icon />} />
+          </div>
         );
       })}
     </div>

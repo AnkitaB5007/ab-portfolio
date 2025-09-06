@@ -18,7 +18,7 @@ const HeroText = () => {
         <p className="text-sm md:text-base font-mono text-slate-400 tracking-wider uppercase">
           Hello, I'm
         </p>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
           Ankita <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Behura</span>
         </h1>
       </motion.div>

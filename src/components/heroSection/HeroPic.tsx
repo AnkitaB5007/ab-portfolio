@@ -14,14 +14,14 @@ const HeroPic = () => {
         {/* Profile Image */}
         <div className="relative z-10">
           <img
-            src="/images/folio_web.jpg"
+            src="/images/folio-web.jpg"
             alt="Ankita Behura"
-            className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl object-cover shadow-2xl border-4 border-slate-700/50"
+            className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover object-top shadow-2xl border-4 border-slate-700/50"
           />
         </div>
         
         {/* Animated Background Elements */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl animate-pulse"></div>
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         
         {/* Floating Elements */}
         <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center animate-bounce">
