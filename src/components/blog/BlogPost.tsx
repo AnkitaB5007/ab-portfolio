@@ -8,12 +8,14 @@ import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import { getBlogPostBySlug, loadBlogPostContent, type BlogPostMeta } from '../../utils/blogLoader';
+import { getPostBySlug } from '../../data/blogData';
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<BlogPostMeta | null>(null);
   const [content, setContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
+  const [coverImage, setCoverImage] = useState<string>('');
 
   useEffect(() => {
     const loadPost = async () => {
@@ -28,6 +30,12 @@ const BlogPost: React.FC = () => {
       }
 
       setPost(postMeta);
+      
+      // Get cover image from blogData
+      const blogDataPost = getPostBySlug(slug);
+      if (blogDataPost?.image) {
+        setCoverImage(blogDataPost.image);
+      }
       
       try {
         const postContent = await loadBlogPostContent(slug);
@@ -81,6 +89,18 @@ const BlogPost: React.FC = () => {
           className="bg-slate-800 rounded-2xl shadow-2xl p-8"
         >
           <div className="mb-12">
+            {/* Cover Image */}
+            {coverImage && (
+              <div className="mb-8 -mx-8">
+                <img 
+                  src={coverImage}
+                  alt={post.title}
+                  className="w-full h-64 md:h-80 object-cover rounded-t-2xl"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            
             <div className="flex items-center gap-4 text-slate-400 mb-6">
               <div className="flex items-center gap-2">
                 <FiCalendar className="w-4 h-4" />
@@ -219,6 +239,24 @@ const BlogPost: React.FC = () => {
                   <li className="text-slate-300">
                     {children}
                   </li>
+                ),
+                img: ({ src, alt }) => (
+                  <img 
+                    src={src} 
+                    alt={alt || ''}
+                    className="w-full rounded-lg my-6 border border-slate-700 shadow-lg"
+                    loading="lazy"
+                  />
+                ),
+                a: ({ href, children }) => (
+                  <a 
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors underline"
+                  >
+                    {children}
+                  </a>
                 )
               }}
             >
