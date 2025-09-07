@@ -2,16 +2,20 @@ import NavbarLinks from "./NavbarLinks";
 import NavbarLogo from "./NavbarLogo";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useEffect, useRef, useState } from "react";
+import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher";
+import { requiredLanguages } from "../../constants/languageSwitcherData";
+import { useTranslation } from "react-i18next";
 
 const NavbarMain = () => {
+  const { i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedLanguageCode, setSelectedLanguageCode] = useState("en");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  
   const handleClickOutsideMenu = (event: MouseEvent) => {
     // Check if the click was outside the menu
     if (
@@ -22,7 +26,10 @@ const NavbarMain = () => {
       setMenuOpen(false);
     }
   };
-  
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+    setSelectedLanguageCode(lang);
+  };
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768); // Update the isMobile state based on the current window width
   };
@@ -46,12 +53,12 @@ const NavbarMain = () => {
   }, [menuOpen]);
 
   return (
-    <nav className="max-w-6xl mx-auto w-full px-6 py-4 fixed top-0 left-0 right-0 z-20">
-      <div className="flex justify-between items-center bg-slate-900/90 backdrop-blur-md px-6 py-4 rounded-xl border border-slate-700/50">
+    <nav className="max-w-[1300px] mx-auto w-full px-4 sm:px-0 mt-2 fixed top-0 left-0 right-0 z-20">
+      <div className="flex justify-between items-center bg-black p-4 rounded-lg rounded-l-full rounded-r-full border-orange border-[0.5px]">
         <NavbarLogo />
         
         {/* Hamburger Menu for Mobile */}
-        <button className="text-xl lg:hidden text-white hover:text-cyan-400 transition-colors" onClick={toggleMenu}>
+        <button className="text-2xl lg:hidden text-white" onClick={toggleMenu}>
           <GiHamburgerMenu />
         </button>
 
@@ -62,13 +69,19 @@ const NavbarMain = () => {
             onLinkClick={() => setMenuOpen(false)}
           />
         </div>
+        
+        <LanguageSwitcher
+          requiredLanguages={requiredLanguages}
+          onSelectionChange={handleLanguageChange}
+          selectedLanguageCode={selectedLanguageCode}
+        />
       </div>
 
       {/* Navbar Links for Mobile */}
       {menuOpen && (
         <div
           ref={menuRef}
-          className="bg-slate-900/95 backdrop-blur-md rounded-xl border border-slate-700/50 mt-2 flex flex-col w-full lg:hidden"
+          className="bg-black text-center rounded-lg border-orange border mt-2 flex flex-col w-full lg:hidden"
         >
           <NavbarLinks
             isMobile={isMobile}

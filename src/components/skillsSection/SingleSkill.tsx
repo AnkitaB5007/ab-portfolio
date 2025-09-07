@@ -7,15 +7,14 @@ interface SingleSkillProps {
 
 const SingleSkill: React.FC<SingleSkillProps> = ({ text, imgSvg }) => {
   return (
-    <div className="flex flex-col items-center group">
-      <div className="bg-slate-800 border border-slate-700 h-20 w-20 flex items-center justify-center rounded-xl group-hover:bg-slate-700 group-hover:border-cyan-500/50 transition-all duration-300 text-4xl shadow-lg">
-        <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+    <div className="hover:-translate-y-10 transition-all duration-500">
+      <div className="flex flex-col items-center gap-2 relative">
+        <div className="bg-white text-cyan h-[100px] w-[80px] flex items-center justify-center rounded-full hover:text-darkGrey hover:scale-105 transform transition-all duration-500 text-6xl border-4 border-orange">
           {imgSvg}
         </div>
+        <p className="text-white font-bold">{text}</p>
       </div>
-      <p className="text-slate-300 font-medium text-sm mt-3 group-hover:text-white transition-colors duration-300">
-        {text}
-      </p>
+      <div className="w-[80px] h-[200px] bg-orange absolute top-[50px] -z-10"></div>
     </div>
   );
 };

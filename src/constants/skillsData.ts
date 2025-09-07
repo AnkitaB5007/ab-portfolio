@@ -1,7 +1,9 @@
 import { IconType } from "react-icons";
-import { FaPython, FaDocker, FaAws, FaGitAlt, FaLinux, FaDatabase } from "react-icons/fa";
-import { SiTensorflow, SiPytorch, SiKubernetes, SiJenkins, SiPostgresql, SiScikitlearn, SiJupyter, SiPrometheus, SiGrafana } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
+import { FaHtml5, FaCss3Alt, FaReact, FaNode, FaAngular } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiTypescript, SiRedux, SiNextdotjs, SiShadcnui } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiStorybook } from "react-icons/si";
 
 interface Skill {
   skill: string;
@@ -10,67 +12,51 @@ interface Skill {
 
 export const skills: Skill[] = [
   {
-    skill: "Python",
-    icon: FaPython,
+    skill: "HTML",
+    icon: FaHtml5,
   },
   {
-    skill: "TensorFlow",
-    icon: SiTensorflow,
+    skill: "CSS",
+    icon: FaCss3Alt,
   },
   {
-    skill: "PyTorch",
-    icon: SiPytorch,
+    skill: "JavaScript",
+    icon: IoLogoJavascript,
   },
   {
-    skill: "Scikit-Learn",
-    icon: SiScikitlearn,
+    skill: "TypeScript",
+    icon: SiTypescript,
   },
   {
-    skill: "Docker",
-    icon: FaDocker,
+    skill: "ReactJS",
+    icon: FaReact,
   },
   {
-    skill: "Kubernetes",
-    icon: SiKubernetes,
+    skill: "Redux",
+    icon: SiRedux,
   },
   {
-    skill: "AWS",
-    icon: FaAws,
+    skill: "Angular",
+    icon: FaAngular,
   },
   {
-    skill: "Azure",
-    icon: VscAzure,
+    skill: "NextJS",
+    icon: SiNextdotjs,
   },
   {
-    skill: "Jenkins",
-    icon: SiJenkins,
+    skill: "NodeJS",
+    icon: FaNode,
   },
   {
-    skill: "PostgreSQL",
-    icon: SiPostgresql,
+    skill: "Tailwind",
+    icon: RiTailwindCssFill,
   },
   {
-    skill: "Jupyter",
-    icon: SiJupyter,
+    skill: "Shadcnui",
+    icon: SiShadcnui,
   },
   {
-    skill: "ChromaDB",
-    icon: FaDatabase,
-  },
-  {
-    skill: "Prometheus",
-    icon: SiPrometheus,
-  },
-  {
-    skill: "Grafana",
-    icon: SiGrafana,
-  },
-  {
-    skill: "Git",
-    icon: FaGitAlt,
-  },
-  {
-    skill: "Linux",
-    icon: FaLinux,
+    skill: "Storybook",
+    icon: SiStorybook,
   },
 ];

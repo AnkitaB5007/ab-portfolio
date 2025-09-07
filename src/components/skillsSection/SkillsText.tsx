@@ -3,12 +3,11 @@ import { useTranslation } from "react-i18next";
 const SkillsText = () => {
   const { t } = useTranslation();
   return (
-    <div className="text-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+    <div className="flex flex-col items-center mt-[100px]">
+      <h2 className="text-6xl text-cyan mb-10">
         {t("skillsSection.skills_text")}
       </h2>
-      <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-6"></div>
-      <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-lg text-center text-white">
         {t("skillsSection.skills_text_shortDesc")}
       </p>
     </div>

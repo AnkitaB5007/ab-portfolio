@@ -6,31 +6,26 @@ const AboutMeText = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col md:items-start items-center md:text-left text-center max-w-lg mx-auto md:mx-0">
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+    <div className="flex flex-col md:items-start sm:items-center md:text-left sm:text-center">
+      <h2 className="text-6xl text-cyan mb-10">
         {t("aboutMeSection.aboutMe_text")}
       </h2>
-      <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 mb-8 md:mx-0 mx-auto"></div>
-      
-      <div className="space-y-4 mb-8">
-        <p className="text-slate-300 text-base leading-relaxed">
-          {t(`aboutMeSection.${shortIntro}`)}
-        </p>
-        <p className="text-slate-300 text-base leading-relaxed">
-          {t(`aboutMeSection.${connectText}`)}
-        </p>
-      </div>
-      
-      <Link
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-120}
-        to={t("aboutMeSection.aboutMe_btn_link_projects")}
-        className="inline-flex items-center gap-2 px-6 py-3 text-cyan-400 border border-cyan-400/30 hover:bg-cyan-400/10 transition-all duration-300 rounded-lg font-medium cursor-pointer"
-      >
-        {t("aboutMeSection.aboutMe_btn_text_projects")}
-      </Link>
+      <p className="text-white text-xl">{t(`aboutMeSection.${shortIntro}`)}</p>
+      <p className="mt-1 text-white text-xl">
+        {t(`aboutMeSection.${connectText}`)}
+      </p>
+      <button className="border border-orange rounded-full py-2 px-4 text-lg flex gap-2 items-center mt-10 hover:bg-orange transition-all duration-500 cursor-pointer mx-auto sm:mx-0">
+        <Link
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-120}
+          to={t("aboutMeSection.aboutMe_btn_link_projects")}
+          className="cursor-pointer text-white hover:text-cyan transition-all duration-500"
+        >
+          {t("aboutMeSection.aboutMe_btn_text_projects")}
+        </Link>
+      </button>
     </div>
   );
 };

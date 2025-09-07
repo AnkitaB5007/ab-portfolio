@@ -24,95 +24,114 @@ const BlogsSection = () => {
   return (
     <div
       id="Blogs"
-      className="min-h-screen flex flex-col justify-center py-20 px-4"
+      className="max-w-[1200px] mx-auto mt-[100px] px-4"
     >
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          className="text-center mb-12"
-          variants={fadeIn("down", 0.2)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {t("blogsSection.blogs_text")}
-          </h2>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-4"></div>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            {t("blogsSection.blogs_description")}
-          </p>
-        </motion.div>
+      <motion.div
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <h2 className="text-6xl text-cyan mb-4 text-center">
+          {t("blogsSection.blogs_text")}
+        </h2>
+        <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+          {t("blogsSection.blogs_description")}
+        </p>
+      </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {featuredPosts.slice(0, 4).map((post, index) => (
-            <motion.article
-              key={post.id}
-              className="group cursor-pointer"
-              variants={fadeIn("up", 0.1 * (index + 1))}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.3 }}
-            >
-              <Link to={`/blog/${post.slug}`} className="block">
-                <div className="border-b border-slate-700 pb-6 mb-6 group-hover:border-cyan-500/50 transition-colors duration-300">
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex items-center gap-3 text-sm text-slate-500">
-                      <span className="text-cyan-400 font-medium">{post.tags[0]}</span>
-                      <span>•</span>
-                      <div className="flex items-center gap-1">
-                        <FiCalendar className="w-3 h-3" />
-                        {formatDate(post.date)}
-                      </div>
-                      <span>•</span>
-                      <div className="flex items-center gap-1">
-                        <FiClock className="w-3 h-3" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-slate-400 leading-relaxed text-sm line-clamp-2">
-                    {post.summary}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {post.tags.slice(1, 4).map((tag, tagIndex) => (
-                      <span 
-                        key={tagIndex}
-                        className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            </motion.article>
-          ))}
-        </div>
-
-        {/* View All Blogs Button */}
-        <motion.div
-          className="text-center mt-12"
-          variants={fadeIn("up", 0.6)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium border-b border-transparent hover:border-cyan-400"
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredPosts.map((post, index) => (
+          <motion.article
+            key={post.id}
+            className="bg-slate-800/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-slate-700/50 hover:border-cyan/50 transition-all duration-300 group"
+            variants={fadeIn("up", 0.2 * (index + 1))}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
           >
-            View All Articles
-            <FiExternalLink className="w-4 h-4" />
-          </Link>
-        </motion.div>
+            {/* Blog Image */}
+            <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              <div className="absolute top-4 left-4">
+                <span className="bg-cyan/20 text-cyan text-xs px-3 py-1 rounded-full">
+                  {post.tags[0]}
+                </span>
+              </div>
+              {/* Dynamic icon based on post topic */}
+              <div className="w-full h-full flex items-center justify-center">
+                <span className="text-6xl">
+                  {post.tags[0] === 'DevOps' ? '⚙️' :
+                   post.tags[0] === 'Linux' ? '🐧' :
+                   post.tags[0] === 'Networking' ? '🌐' :
+                   post.tags[0] === 'AI' ? '🤖' :
+                   post.tags[0] === 'Docker' ? '🐳' : '📝'}
+                </span>
+              </div>
+            </div>
+
+            {/* Blog Content */}
+            <div className="p-6">
+              <div className="flex items-center gap-4 text-sm text-slate-500 mb-3">
+                <div className="flex items-center gap-1">
+                  <FiCalendar className="w-4 h-4" />
+                  {formatDate(post.date)}
+                </div>
+                <div className="flex items-center gap-1">
+                  <FiClock className="w-4 h-4" />
+                  {post.readTime}
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan transition-colors duration-300">
+                {post.title}
+              </h3>
+              
+              <p className="text-slate-400 mb-4 leading-relaxed">
+                {post.summary}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {post.tags.slice(1).map((tag, tagIndex) => (
+                  <span 
+                    key={tagIndex}
+                    className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Read More Button */}
+              <Link
+                to={`/blog/${post.slug}`}
+                className="inline-flex items-center gap-2 text-cyan hover:text-white transition-colors duration-300 font-semibold"
+              >
+                Read More
+                <FiExternalLink className="w-4 h-4" />
+              </Link>
+            </div>
+          </motion.article>
+        ))}
       </div>
+
+      {/* View All Blogs Button */}
+      <motion.div
+        className="text-center mt-12"
+        variants={fadeIn("up", 0.8)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <Link
+          to="/blog"
+          className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+        >
+          View All Blogs
+          <FiExternalLink className="w-5 h-5" />
+        </Link>
+      </motion.div>
     </div>
   );
 };

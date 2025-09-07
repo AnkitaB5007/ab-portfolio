@@ -10,11 +10,13 @@ public/
 │   ├── post-1.md
 │   ├── post-2.md
 │   └── ...
-├── blog-images/          # Blog post images go here
+├── blog-images/          # Blog post images go here (.jpg, .png, .webp)
 │   ├── image1.jpg
-│   ├── image2.png
+│   ├── mcp-cover.webp
 │   └── ...
 src/
+├── data/
+│   └── blogData.ts       # Main blog display data (for blog list)
 └── utils/
     └── blogLoader.ts     # Blog metadata and loading logic
 ```
@@ -47,54 +49,119 @@ Your content starts here...
 
 ### Step 3: Add Images (if needed)
 1. Put all images in `public/blog-images/`
-2. Reference them in your markdown using:
+2. Supported formats: `.jpg`, `.png`, `.webp`, `.svg`
+3. Use WebP format for better performance when possible
+4. Reference them in your markdown using:
    ```markdown
-   ![Alt text](/blog-images/your-image.jpg)
+   ![Alt text](/blog-images/your-image.webp)
    ```
 
-### Step 4: Update blogLoader.ts
-Add your new post to the metadata array in `src/utils/blogLoader.ts`:
+### Step 4: Update Blog Data Files
+You need to update **TWO** files to register your new blog post:
+
+#### A. Update `src/data/blogData.ts`
+This controls how your post appears in the blog list and featured sections:
 
 ```typescript
 export const blogPosts: BlogPost[] = [
-  // ...existing posts...
   {
-    id: 11, // increment the ID
+    id: 1, // Use the next available ID
     title: "Your Blog Post Title",
-    slug: "your-blog-post-filename", // without .md extension
-    date: "2025-01-15",
-    summary: "Your post summary here",
-    tags: ["DevOps", "CI/CD", "Docker", "Automation"],
-    categories: ["DevOps"],
-    readTime: "8 min read"
-  }
+    excerpt: "A compelling excerpt that appears in the blog list (keep under 200 chars)",
+    date: "2025-09-07",
+    readTime: "8 min read",
+    tags: ["AI", "OpenAI", "Function Calling"],
+    category: "Artificial Intelligence", // Single category for display
+    slug: "your-blog-post-filename", // Must match your .md filename
+    image: "/blog-images/your-cover-image.webp",
+    featured: true // Set to true for homepage display
+  },
+  // ...existing posts with incremented IDs...
+];
+```
+
+#### B. Update `src/utils/blogLoader.ts`
+This handles the actual loading of blog post content:
+
+```typescript
+export const blogPostsData: BlogPostMeta[] = [
+  {
+    id: 1, // Same ID as in blogData.ts
+    title: "Your Blog Post Title",
+    date: "2025-09-07",
+    summary: "Summary from your markdown frontmatter",
+    tags: ["AI", "OpenAI", "Function Calling"],
+    categories: ["AI"], // Can be multiple categories as array
+    slug: "your-blog-post-filename", // Must match exactly
+    readTime: "8 min read",
+    content: "" // This gets loaded automatically
+  },
+  // ...existing posts with incremented IDs...
 ];
 ```
 
 ### Step 5: Test Locally
 ```bash
-# Build the project
+# Install dependencies (if first time)
+npm install
+
+# Test the build process
 npm run build
 
 # Start development server
 npm run dev
 
 # Visit your blog at:
-# http://localhost:5173/blogs
-# http://localhost:5173/blog/your-post-slug
+# http://localhost:5173/blogs (blog list)
+# http://localhost:5173/blog/your-post-slug (individual post)
 ```
 
-### Step 6: Deploy
+**Important**: Always test the build process with `npm run build` to catch any TypeScript or configuration errors before deploying.
+
+### Step 6: Deploy to Production
+
+#### Option A: Automatic Deployment (Recommended)
+If your repository is connected to Vercel:
+
 ```bash
-# Add changes to git
+# Add all changes to git
 git add .
 
 # Commit with descriptive message
-git commit -m "Add new blog post: Your Post Title"
+git commit -m "feat: add blog post about [topic]
 
-# Push to GitHub (auto-deploys to Vercel)
+- Add markdown file: your-post-filename.md
+- Update blog data registry
+- Add cover image: your-image.webp"
+
+# Push to GitHub (triggers automatic deployment)
 git push origin master
 ```
+
+#### Option B: Manual Deployment
+If you need to deploy manually to Vercel:
+
+```bash
+# Install Vercel CLI (if not installed)
+npm i -g vercel
+
+# Build the project
+npm run build
+
+# Deploy to Vercel
+vercel --prod
+
+# Or deploy to preview first
+vercel
+```
+
+#### Deployment Checklist
+- [ ] Build completes successfully (`npm run build`)
+- [ ] No TypeScript errors
+- [ ] Cover image exists in `/public/blog-images/`
+- [ ] Slug matches between filename and both data files
+- [ ] IDs are consistent across data files
+- [ ] All commits are pushed to `master` branch
 
 ## 📝 Markdown Features Supported
 
@@ -139,10 +206,17 @@ function example() {
 ### Categories
 Use these predefined categories for consistent styling:
 - `"DevOps"` - Shows ⚙️ icon
-- `"AI"` or `"Machine Learning"` - Shows 🤖 icon
+- `"Artificial Intelligence"` or `"AI"` - Shows 🤖 icon  
 - `"Networking"` - Shows 🌐 icon
-- `"Linux"` or `"System Administration"` - Shows 🐧 icon
+- `"System Administration"` or `"Linux"` - Shows 🐧 icon
+- `"Web Development"` - Shows 💻 icon
 - Other categories show 📝 icon
+
+### Image Formats
+- **Preferred**: `.webp` (best compression and quality)
+- **Supported**: `.jpg`, `.jpeg`, `.png`, `.svg`
+- **Naming**: Use descriptive names with hyphens (e.g., `mcp-cover.webp`)
+- **Size**: Optimize images to under 500KB when possible
 
 ### Tags
 Keep tags relevant and consistent:
@@ -159,32 +233,66 @@ Estimate based on:
 ## 🔧 Troubleshooting
 
 ### Post Not Appearing?
-1. Check filename matches slug in `blogLoader.ts`
-2. Ensure frontmatter format is correct
+1. Check filename matches slug in **both** `blogData.ts` and `blogLoader.ts`
+2. Ensure frontmatter format is correct (valid YAML)
 3. Verify file is in `public/blog-posts/`
-4. Check browser console for errors
+4. Confirm IDs are consistent across both data files
+5. Check browser console for errors
+6. Run `npm run build` to catch TypeScript errors
 
 ### Images Not Loading?
 1. Verify images are in `public/blog-images/`
 2. Check image paths start with `/blog-images/`
-3. Ensure image file extensions match exactly
+3. Ensure image file extensions match exactly (case-sensitive)
+4. Try different formats (.webp, .jpg, .png)
 
 ### Build Errors?
-1. Check frontmatter syntax (proper YAML format)
-2. Ensure all required fields are present
-3. Verify no syntax errors in `blogLoader.ts`
+1. Check frontmatter syntax (proper YAML format between `---`)
+2. Ensure all required fields are present in frontmatter
+3. Verify no syntax errors in `blogData.ts` and `blogLoader.ts`
+4. Confirm TypeScript types match the interfaces
+5. Check for missing commas in array objects
 
 ## 📋 Pre-Deployment Checklist
 
 - [ ] Markdown file created in `public/blog-posts/`
-- [ ] Frontmatter includes all required fields
-- [ ] Images added to `public/blog-images/` (if any)
+- [ ] Frontmatter includes all required fields (title, date, tags, categories, summary, readTime)
+- [ ] Cover image added to `public/blog-images/` (preferably .webp format)
 - [ ] Image paths use `/blog-images/` prefix
-- [ ] Blog metadata added to `blogLoader.ts`
-- [ ] Local testing completed successfully
-- [ ] Build runs without errors
-- [ ] Blog post accessible at correct URL
-- [ ] Committed and pushed to GitHub
+- [ ] Blog post added to `src/data/blogData.ts` with correct ID and slug
+- [ ] Blog post added to `src/utils/blogLoader.ts` with matching ID and slug
+- [ ] IDs are consistent between both data files
+- [ ] Local testing completed successfully (`npm run dev`)
+- [ ] Build runs without errors (`npm run build`)
+- [ ] Blog post accessible at correct URLs
+- [ ] All changes committed and pushed to `master` branch
+- [ ] Automatic deployment completed (check Vercel dashboard)
+
+## 🚀 Quick Reference: Complete Workflow
+
+```bash
+# 1. Create the blog post
+touch public/blog-posts/your-new-post.md
+
+# 2. Add your cover image  
+# Copy your-image.webp to public/blog-images/
+
+# 3. Edit the blog post with frontmatter and content
+# Edit public/blog-posts/your-new-post.md
+
+# 4. Register the blog post in both data files
+# Edit src/data/blogData.ts
+# Edit src/utils/blogLoader.ts
+
+# 5. Test locally
+npm run build
+npm run dev
+
+# 6. Deploy
+git add .
+git commit -m "feat: add blog post about [topic]"
+git push origin master
+```
 
 ## 🌐 Live URLs
 After deployment, your blog will be available at:
