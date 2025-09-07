@@ -13,19 +13,15 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ isMobile, onLinkClick }) => {
   return (
     <ul
       className={`flex ${
-        isMobile ? "flex-col w-full items-center bg-darkCyan" : "lg:flex-row"
-      } gap-6 text-white font-body lg:relative sm:absolute sm:top-[120%] ${
-        isMobile ? "" : "left-[50%] -translate-x-[50%]"
-      } lg:text-md sm:text-xl ${
-        isMobile ? "sm:bg-cyan/30 backdrop-blur-lg py-4" : "lg:bg-black"
-      }`}
+        isMobile ? "flex-col w-full items-center py-4" : "flex-row"
+      } gap-8 text-white font-medium`}
     >
       {links.map((link, index) => (
         <li key={index} className="group">
           <Link
-            className={`cursor-pointer text-white transition-all duration-300 
-              ${isMobile ? "py-2 px-4" : ""} 
-              group-hover:bg-cyan/40`}
+            className={`cursor-pointer text-slate-300 hover:text-white transition-all duration-300 
+              ${isMobile ? "py-3 px-4 text-base" : "text-sm"} 
+              relative`}
             to={t(`navBar.${link.section}`)}
             smooth={true}
             spy={true}
@@ -34,8 +30,8 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ isMobile, onLinkClick }) => {
             onClick={onLinkClick}
           >
             {t(`navBar.${link.section}`)}
+            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></div>
           </Link>
-          <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500"></div>
         </li>
       ))}
     </ul>

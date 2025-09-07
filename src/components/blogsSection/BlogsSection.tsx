@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
-import { useTranslation } from "react-i18next";
 import { FiExternalLink, FiCalendar, FiClock } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { getAllBlogPosts } from "../../utils/blogLoader";
 
 const BlogsSection = () => {
-  const { t } = useTranslation();
-
   // Get your actual blog posts
   const allBlogPosts = getAllBlogPosts();
   const featuredPosts = allBlogPosts.slice(0, 6); // Show first 6 posts
@@ -24,7 +21,7 @@ const BlogsSection = () => {
   return (
     <div
       id="Blogs"
-      className="max-w-[1200px] mx-auto mt-[100px] px-4"
+      className="max-w-[1200px] mx-auto pt-[120px] pb-[100px] px-4"
     >
       <motion.div
         variants={fadeIn("down", 0.2)}
@@ -32,35 +29,36 @@ const BlogsSection = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h2 className="text-6xl text-cyan mb-4 text-center">
-          {t("blogsSection.blogs_text")}
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+          Latest Articles
         </h2>
-        <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-          {t("blogsSection.blogs_description")}
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-6"></div>
+        <p className="text-slate-400 text-center text-lg mb-16 max-w-3xl mx-auto leading-relaxed">
+          Explore my thoughts on AI, DevOps, System Administration, and cutting-edge technology insights
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {featuredPosts.map((post, index) => (
           <motion.article
             key={post.id}
-            className="bg-slate-800/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-slate-700/50 hover:border-cyan/50 transition-all duration-300 group"
-            variants={fadeIn("up", 0.2 * (index + 1))}
+            className="bg-white/5 rounded-2xl overflow-hidden backdrop-blur-sm border border-slate-700/30 hover:border-cyan-400/50 transition-all duration-500 group hover:transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10"
+            variants={fadeIn("up", 0.1 * (index + 1))}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
           >
-            {/* Blog Image */}
-            <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+            {/* Blog Header */}
+            <div className="relative h-48 bg-gradient-to-br from-slate-700/50 to-slate-800/50 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute top-4 left-4">
-                <span className="bg-cyan/20 text-cyan text-xs px-3 py-1 rounded-full">
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-lg">
                   {post.tags[0]}
                 </span>
               </div>
-              {/* Dynamic icon based on post topic */}
+              {/* Elegant icon display */}
               <div className="w-full h-full flex items-center justify-center">
-                <span className="text-6xl">
+                <span className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">
                   {post.tags[0] === 'DevOps' ? '⚙️' :
                    post.tags[0] === 'Linux' ? '🐧' :
                    post.tags[0] === 'Networking' ? '🌐' :
@@ -72,31 +70,31 @@ const BlogsSection = () => {
 
             {/* Blog Content */}
             <div className="p-6">
-              <div className="flex items-center gap-4 text-sm text-slate-500 mb-3">
-                <div className="flex items-center gap-1">
-                  <FiCalendar className="w-4 h-4" />
+              <div className="flex items-center gap-4 text-sm text-slate-400 mb-4">
+                <div className="flex items-center gap-1.5">
+                  <FiCalendar className="w-4 h-4 text-cyan-400" />
                   {formatDate(post.date)}
                 </div>
-                <div className="flex items-center gap-1">
-                  <FiClock className="w-4 h-4" />
+                <div className="flex items-center gap-1.5">
+                  <FiClock className="w-4 h-4 text-cyan-400" />
                   {post.readTime}
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan transition-colors duration-300">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
                 {post.title}
               </h3>
               
-              <p className="text-slate-400 mb-4 leading-relaxed">
+              <p className="text-slate-300 mb-5 leading-relaxed text-sm line-clamp-3">
                 {post.summary}
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {post.tags.slice(1).map((tag, tagIndex) => (
+              <div className="flex flex-wrap gap-2 mb-5">
+                {post.tags.slice(1, 3).map((tag, tagIndex) => (
                   <span 
                     key={tagIndex}
-                    className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded"
+                    className="text-xs bg-slate-700/40 text-slate-300 px-2.5 py-1 rounded-full border border-slate-600/30"
                   >
                     {tag}
                   </span>
@@ -106,19 +104,19 @@ const BlogsSection = () => {
               {/* Read More Button */}
               <Link
                 to={`/blog/${post.slug}`}
-                className="inline-flex items-center gap-2 text-cyan hover:text-white transition-colors duration-300 font-semibold"
+                className="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition-all duration-300 font-medium text-sm group-hover:translate-x-1"
               >
-                Read More
-                <FiExternalLink className="w-4 h-4" />
+                Read Article
+                <FiExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
               </Link>
             </div>
           </motion.article>
         ))}
       </div>
 
-      {/* View All Blogs Button */}
+      {/* View All Articles Button */}
       <motion.div
-        className="text-center mt-12"
+        className="text-center"
         variants={fadeIn("up", 0.8)}
         initial="hidden"
         whileInView="show"
@@ -126,9 +124,9 @@ const BlogsSection = () => {
       >
         <Link
           to="/blog"
-          className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+          className="inline-flex items-center gap-3 text-slate-300 hover:text-white border-2 border-slate-600/50 hover:border-cyan-400/50 px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10 backdrop-blur-sm"
         >
-          View All Blogs
+          View All Articles
           <FiExternalLink className="w-5 h-5" />
         </Link>
       </motion.div>

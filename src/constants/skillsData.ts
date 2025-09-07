@@ -1,9 +1,7 @@
 import { IconType } from "react-icons";
-import { FaHtml5, FaCss3Alt, FaReact, FaNode, FaAngular } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiTypescript, SiRedux, SiNextdotjs, SiShadcnui } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiStorybook } from "react-icons/si";
+import { FaPython, FaDocker, FaAws, FaGitAlt, FaLinux, FaDatabase } from "react-icons/fa";
+import { SiTensorflow, SiPytorch, SiKubernetes, SiJenkins, SiPostgresql, SiScikitlearn, SiJupyter, SiPrometheus, SiGrafana } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 
 interface Skill {
   skill: string;
@@ -12,51 +10,67 @@ interface Skill {
 
 export const skills: Skill[] = [
   {
-    skill: "HTML",
-    icon: FaHtml5,
+    skill: "Python",
+    icon: FaPython,
   },
   {
-    skill: "CSS",
-    icon: FaCss3Alt,
+    skill: "TensorFlow",
+    icon: SiTensorflow,
   },
   {
-    skill: "JavaScript",
-    icon: IoLogoJavascript,
+    skill: "PyTorch",
+    icon: SiPytorch,
   },
   {
-    skill: "TypeScript",
-    icon: SiTypescript,
+    skill: "Scikit-Learn",
+    icon: SiScikitlearn,
   },
   {
-    skill: "ReactJS",
-    icon: FaReact,
+    skill: "Docker",
+    icon: FaDocker,
   },
   {
-    skill: "Redux",
-    icon: SiRedux,
+    skill: "Kubernetes",
+    icon: SiKubernetes,
   },
   {
-    skill: "Angular",
-    icon: FaAngular,
+    skill: "AWS",
+    icon: FaAws,
   },
   {
-    skill: "NextJS",
-    icon: SiNextdotjs,
+    skill: "Azure",
+    icon: VscAzure,
   },
   {
-    skill: "NodeJS",
-    icon: FaNode,
+    skill: "Jenkins",
+    icon: SiJenkins,
   },
   {
-    skill: "Tailwind",
-    icon: RiTailwindCssFill,
+    skill: "PostgreSQL",
+    icon: SiPostgresql,
   },
   {
-    skill: "Shadcnui",
-    icon: SiShadcnui,
+    skill: "Jupyter",
+    icon: SiJupyter,
   },
   {
-    skill: "Storybook",
-    icon: SiStorybook,
+    skill: "ChromaDB",
+    icon: FaDatabase,
+  },
+  {
+    skill: "Prometheus",
+    icon: SiPrometheus,
+  },
+  {
+    skill: "Grafana",
+    icon: SiGrafana,
+  },
+  {
+    skill: "Git",
+    icon: FaGitAlt,
+  },
+  {
+    skill: "Linux",
+    icon: FaLinux,
   },
 ];
