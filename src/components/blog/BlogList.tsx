@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../framerMotion/variants';
 import { FiArrowLeft, FiCalendar, FiClock, FiExternalLink } from 'react-icons/fi';
-import { getAllBlogPosts } from '../../utils/blogLoader';
+import { blogPosts } from '../../data/blogData';
 
 const BlogList: React.FC = () => {
-  // Get all your actual blog posts
-  const blogPosts = getAllBlogPosts();
+  // Use the actual blog posts with images and proper data
+  const allBlogPosts = [...blogPosts].sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
   
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -18,7 +20,7 @@ const BlogList: React.FC = () => {
     });
   };
 
-  const categories = [...new Set(blogPosts.map(post => post.categories[0]))];
+  const categories = [...new Set(allBlogPosts.map(post => post.category))];
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -75,7 +77,7 @@ const BlogList: React.FC = () => {
 
         {/* Blog Posts Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
+          {allBlogPosts.map((post, index) => (
             <motion.article
               key={post.id}
               className="bg-slate-800/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-slate-700/50 hover:border-cyan/50 transition-all duration-300 group"
@@ -83,21 +85,37 @@ const BlogList: React.FC = () => {
               initial="hidden"
               animate="show"
             >
-              {/* Blog Image Placeholder */}
+              {/* Blog Cover Image */}
               <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  onError={(e) => {
+                    // Fallback to gradient with icon if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                        <div class="w-full h-full flex items-center justify-center">
+                          <span class="text-6xl">
+                            ${post.category?.includes('DevOps') ? '⚙️' :
+                              post.category?.includes('AI') ? '🤖' :
+                              post.category?.includes('Network') ? '🌐' :
+                              post.category?.includes('Linux') || post.category?.includes('System') ? '🐧' : '📝'}
+                          </span>
+                        </div>
+                      `;
+                    }
+                  }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                 <div className="absolute top-4 left-4">
                   <span className="bg-cyan/20 text-cyan text-xs px-3 py-1 rounded-full">
-                    {post.categories[0]}
-                  </span>
-                </div>
-                {/* Icon based on category */}
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-6xl">
-                    {post.categories[0]?.includes('DevOps') ? '⚙️' :
-                     post.categories[0]?.includes('AI') ? '🤖' :
-                     post.categories[0]?.includes('Network') ? '🌐' :
-                     post.categories[0]?.includes('Linux') || post.categories[0]?.includes('System') ? '�' : '📝'}
+                    {post.category}
                   </span>
                 </div>
               </div>
@@ -122,7 +140,7 @@ const BlogList: React.FC = () => {
                 </h3>
                 
                 <p className="text-slate-400 mb-4 leading-relaxed">
-                  {post.summary}
+                  {post.excerpt}
                 </p>
 
                 {/* Tags */}
