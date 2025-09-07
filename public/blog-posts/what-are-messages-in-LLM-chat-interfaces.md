@@ -1,10 +1,10 @@
 ---
-date: '2025-07-02'
-draft: false
-title: 'What Are Messages in LLM Chat Interfaces'
+title: "What Are Messages in LLM Chat Interfaces"
+date: 2025-07-02
+tags: ["AI", "LLM", "Chat Interfaces", "Machine Learning"]
+categories: ["AI"]
 summary: "Understanding the role of messages in LLM chat interfaces, their structure, and how they facilitate communication between users and AI models."
-tags: ["LLM", "Chat Interfaces", "Messages"]
-categories: ["LLM", "Chat Interfaces"]
+readTime: "7 min read"
 ---
 
 ## What Are “Messages” in LLM Chat Interfaces?
