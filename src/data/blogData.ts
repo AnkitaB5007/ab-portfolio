@@ -1,6 +1,5 @@
-// Blog post interface
-export interface BlogPost {
-  id: number;
+// Blog post interface (without manual ID)
+export interface BlogPostData {
   title: string;
   excerpt: string;
   date: string;
@@ -12,10 +11,14 @@ export interface BlogPost {
   featured: boolean;
 }
 
-// Blog data - easily maintainable
-export const blogPosts: BlogPost[] = [
+// Blog post interface with auto-generated ID
+export interface BlogPost extends BlogPostData {
+  id: number;
+}
+
+// Blog data - just add new posts at the top, IDs auto-generated!
+const blogPostsData: BlogPostData[] = [
   {
-    id: 1,
     title: "Model Context Protocol: Architecture Explained",
     excerpt: "Breaking down the architecture of Model Context Protocol with analogies and examples.",
     date: "2025-09-14",
@@ -27,7 +30,6 @@ export const blogPosts: BlogPost[] = [
     featured: true
   },
   {
-    id: 2,
     title: "Model Context Protocol: Why It Matters",
     excerpt: "The WHY behind Model Context Protocol and its significance in AI interactions. Understanding the standardized way for AI systems to communicate with external tools.",
     date: "2025-09-07",
@@ -39,7 +41,6 @@ export const blogPosts: BlogPost[] = [
     featured: true
   },
   {
-    id: 3,
     title: "What Are Messages in LLM Chat Interfaces",
     excerpt: "Understanding the role of messages in LLM chat interfaces, their structure, and how they facilitate communication between users and AI models.",
     date: "2025-07-02",
@@ -51,7 +52,6 @@ export const blogPosts: BlogPost[] = [
     featured: true
   },
   {
-    id: 4,
     title: "What is DevOps? A Beginner's Guide",
     excerpt: "An overview of DevOps principles, best practices, and how to implement them in your projects using Python and GitHub Actions.",
     date: "2025-06-10",
@@ -63,7 +63,6 @@ export const blogPosts: BlogPost[] = [
     featured: false
   },
   {
-    id: 5,
     title: "Linux Users and Groups Management",
     excerpt: "A technical reference for understanding and managing Linux user groups and file permissions, including commands, best practices, and security tips.",
     date: "2025-07-18",
@@ -75,7 +74,6 @@ export const blogPosts: BlogPost[] = [
     featured: false
   },
   {
-    id: 5,
     title: "Understanding OSI and TCP/IP Models",
     excerpt: "Deep dive into networking fundamentals - comparing OSI and TCP/IP models, their layers, and how data flows through network protocols.",
     date: "2025-07-08",
@@ -87,7 +85,6 @@ export const blogPosts: BlogPost[] = [
     featured: false
   },
   {
-    id: 6,
     title: "Ports and Protocols in Networking",
     excerpt: "Comprehensive guide to network ports, protocols, and how they work together to enable communication in distributed systems.",
     date: "2025-07-08",
@@ -95,23 +92,10 @@ export const blogPosts: BlogPost[] = [
     tags: ["Networking", "Protocols", "Infrastructure"],
     category: "Networking",
     slug: "ports-and-protocols",
-    image: "/blog-images/ports-protocols.jpg",
+    image: "/blog-images/avatar.jpg",
     featured: false
   },
   {
-    id: 7,
-    title: "Understanding Messages in LLM Chat Interfaces",
-    excerpt: "Explore how Large Language Models process and respond to messages in chat interfaces, including prompt engineering and conversation context.",
-    date: "2025-07-02",
-    readTime: "7 min read",
-    tags: ["AI", "LLM", "Machine Learning"],
-    category: "Artificial Intelligence",
-    slug: "what-are-messages-in-llm-chat-interfaces",
-    image: "/blog-images/llm-chat.jpg",
-    featured: true
-  },
-  {
-    id: 7,
     title: "Debug Docker Basics",
     excerpt: "Essential Docker debugging techniques, common issues, and troubleshooting strategies for containerized applications.",
     date: "2025-07-01",
@@ -119,16 +103,22 @@ export const blogPosts: BlogPost[] = [
     tags: ["Docker", "DevOps", "Containers"],
     category: "DevOps",
     slug: "debug-docker-basics",
-    image: "/blog-images/docker-debug.jpg",
+    image: "/blog-images/avatar.jpg",
     featured: false
   }
 ];
 
+// Auto-generate IDs based on array position (1-indexed)
+export const blogPosts: BlogPost[] = blogPostsData.map((post, index) => ({
+  ...post,
+  id: index + 1
+}));
+
 // Helper functions
-export const getFeaturedPosts = () => blogPosts.filter(post => post.featured);
-export const getPostsByCategory = (category: string) => blogPosts.filter(post => post.category === category);
-export const getPostBySlug = (slug: string) => blogPosts.find(post => post.slug === slug);
-export const getLatestPosts = (count: number = 6) => blogPosts.slice(0, count);
+export const getFeaturedPosts = (): BlogPost[] => blogPosts.filter(post => post.featured);
+export const getPostsByCategory = (category: string): BlogPost[] => blogPosts.filter(post => post.category === category);
+export const getPostBySlug = (slug: string): BlogPost | undefined => blogPosts.find(post => post.slug === slug);
+export const getLatestPosts = (count: number = 6): BlogPost[] => blogPosts.slice(0, count);
 
 // Blog configuration
 export const blogConfig = {
