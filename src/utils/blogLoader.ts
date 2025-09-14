@@ -18,11 +18,11 @@ export const blogPostsData: BlogPostMeta[] = [
     id: 1,
     title: "Model Context Protocol: Architecture Explained",
     date: "2025-09-14",
-    summary: "A deep dive into the architecture of Model Context Protocol, exploring its components and how they interact.",
-    tags: ["AI", "OpenAI", "Function Calling", "Model Context Protocol"],
+    summary: "Breaking down the architecture of Model Context Protocol with analogies and examples.",
+    tags: ["AI", "Anthropic", "JSON-RPC 2.0", "Model Context Protocol", "MCP"],
     categories: ["AI"],
-    slug: "model-context-protocol-architecture",
-    readTime: "8 min read",
+    slug: "model-context-protocol-arch",
+    readTime: "7 min read",
     content: ""
   },
   {
@@ -38,6 +38,17 @@ export const blogPostsData: BlogPostMeta[] = [
   },
   {
     id: 3,
+    title: "What Are Messages in LLM Chat Interfaces",
+    date: "2025-07-02",
+    summary: "Understanding the role of messages in LLM chat interfaces, their structure, and how they facilitate communication between users and AI models.",
+    tags: ["AI", "LLM", "Chat Interfaces", "Machine Learning"],
+    categories: ["AI"],
+    slug: "what-are-messages-in-LLM-chat-interfaces",
+    readTime: "7 min read",
+    content: ""
+  },
+  {
+    id: 4,
     title: "What is DevOps? A Beginner's Guide",
     date: "2025-06-10",
     summary: "An overview of DevOps principles, best practices, and how to implement them in your projects using Python and GitHub Actions.",
@@ -48,7 +59,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: "" // Will be loaded dynamically
   },
   {
-    id: 4,
+    id: 5,
     title: "Linux Users and Groups",
     date: "2025-07-18",
     summary: "A technical reference for understanding and managing Linux user groups and file permissions, including commands, best practices, and security tips.",
@@ -59,7 +70,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 5,
+    id: 6,
     title: "Understand OSI and TCP/IP Models",
     date: "2025-07-07",
     summary: "An overview of the OSI and TCP/IP networking models, their layers, functions, and real-world applications.",
@@ -70,7 +81,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 6,
+    id: 7,
     title: "Ports and Protocols in Networking",
     date: "2025-07-08",
     summary: "Comprehensive guide to network ports, protocols, and how they work together to enable communication in distributed systems.",
@@ -78,17 +89,6 @@ export const blogPostsData: BlogPostMeta[] = [
     categories: ["Networking"],
     slug: "ports-and-protocols",
     readTime: "9 min read",
-    content: ""
-  },
-  {
-    id: 7,
-    title: "Understanding Messages in LLM Chat Interfaces",
-    date: "2025-07-02",
-    summary: "Explore how Large Language Models process and respond to messages in chat interfaces, including prompt engineering and conversation context.",
-    tags: ["AI", "LLM", "Machine Learning"],
-    categories: ["AI/ML"],
-    slug: "what-are-messages-in-LLM-chat-interfaces",
-    readTime: "7 min read",
     content: ""
   },
   {
