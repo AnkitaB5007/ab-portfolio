@@ -47,14 +47,21 @@ readTime: "8 min read"
 Your content starts here...
 ```
 
-### Step 3: Add Images (if needed)
-1. Put all images in `public/blog-images/`
+### Step 3: Add Images (Optional)
+1. Put images in `public/blog-images/` **only if you have specific images for your post**
 2. Supported formats: `.jpg`, `.png`, `.webp`, `.svg`
 3. Use WebP format for better performance when possible
 4. Reference them in your markdown using:
    ```markdown
    ![Alt text](/blog-images/your-image.webp)
    ```
+
+**✨ No cover image? No problem!** The system will automatically show beautiful category icons:
+- **DevOps**: ⚙️ Gear icon
+- **AI/Artificial Intelligence**: 🤖 Robot icon  
+- **Networking**: 🌐 Globe icon
+- **Linux/System Administration**: 🐧 Penguin icon
+- **Other categories**: 📝 Document icon
 
 ### Step 4: Update Blog Data Files
 You need to update **TWO** files to register your new blog post:
@@ -73,7 +80,7 @@ const blogPostsData: BlogPostData[] = [
     tags: ["AI", "OpenAI", "Function Calling"],
     category: "Artificial Intelligence", // Single category for display
     slug: "your-blog-post-filename", // Must match your .md filename
-    image: "/blog-images/your-cover-image.webp",
+    image: "/blog-images/your-cover-image.webp", // ✨ OPTIONAL! Remove this line to show category icon
     featured: true // Set to true for homepage display
   },
   // ...existing posts (IDs auto-generated: new post gets ID 1, others shift down)

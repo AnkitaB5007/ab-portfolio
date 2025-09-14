@@ -1,4 +1,4 @@
-// Blog post interface (without manual ID)
+  // Blog post interface (without manual ID)
 export interface BlogPostData {
   title: string;
   excerpt: string;
@@ -7,7 +7,7 @@ export interface BlogPostData {
   tags: string[];
   category: string;
   slug: string;
-  image: string;
+  image?: string; // Optional - will show category icon if not provided
   featured: boolean;
 }
 
@@ -48,7 +48,6 @@ const blogPostsData: BlogPostData[] = [
     tags: ["AI", "LLM", "Chat Interfaces", "Machine Learning"],
     category: "Artificial Intelligence",
     slug: "what-are-messages-in-LLM-chat-interfaces",
-    image: "/blog-images/avatar.jpg",
     featured: true
   },
   {
@@ -59,7 +58,7 @@ const blogPostsData: BlogPostData[] = [
     tags: ["DevOps", "CI/CD", "Python"],
     category: "DevOps",
     slug: "what-is-devops",
-    image: "/blog-images/avatar.jpg",
+    image: "/blog-images/devops.png",
     featured: false
   },
   {
@@ -70,7 +69,6 @@ const blogPostsData: BlogPostData[] = [
     tags: ["Linux", "System Administration", "Security"],
     category: "System Administration",
     slug: "linux-users-and-groups",
-    image: "/blog-images/avatar.jpg",
     featured: false
   },
   {
@@ -92,7 +90,6 @@ const blogPostsData: BlogPostData[] = [
     tags: ["Networking", "Protocols", "Infrastructure"],
     category: "Networking",
     slug: "ports-and-protocols",
-    image: "/blog-images/avatar.jpg",
     featured: false
   },
   {
@@ -103,7 +100,6 @@ const blogPostsData: BlogPostData[] = [
     tags: ["Docker", "DevOps", "Containers"],
     category: "DevOps",
     slug: "debug-docker-basics",
-    image: "/blog-images/avatar.jpg",
     featured: false
   }
 ];

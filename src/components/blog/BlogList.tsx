@@ -87,31 +87,24 @@ const BlogList: React.FC = () => {
             >
               {/* Blog Cover Image */}
               <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  loading="lazy"
-                  onError={(e) => {
-                    // Fallback to gradient with icon if image fails to load
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const parent = target.parentElement;
-                    if (parent) {
-                      parent.innerHTML = `
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                        <div class="w-full h-full flex items-center justify-center">
-                          <span class="text-6xl">
-                            ${post.category?.includes('DevOps') ? '⚙️' :
-                              post.category?.includes('AI') ? '🤖' :
-                              post.category?.includes('Network') ? '🌐' :
-                              post.category?.includes('Linux') || post.category?.includes('System') ? '🐧' : '📝'}
-                          </span>
-                        </div>
-                      `;
-                    }
-                  }}
-                />
+                {post.image ? (
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                ) : (
+                  // Show category icon when no image
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-6xl">
+                      {post.category?.includes('DevOps') ? '⚙️' :
+                        post.category?.includes('AI') || post.category?.includes('Artificial Intelligence') ? '🤖' :
+                        post.category?.includes('Network') ? '🌐' :
+                        post.category?.includes('Linux') || post.category?.includes('System') ? '🐧' : '📝'}
+                    </span>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                 <div className="absolute top-4 left-4">
                   <span className="bg-cyan/20 text-cyan text-xs px-3 py-1 rounded-full">
