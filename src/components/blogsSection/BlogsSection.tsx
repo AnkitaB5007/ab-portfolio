@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import { FiExternalLink, FiCalendar, FiClock } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { getAllBlogPosts } from "../../utils/blogLoader";
+import { getFeaturedPosts } from "../../data/blogData";
 
 const BlogsSection = () => {
-  // Get your actual blog posts
-  const allBlogPosts = getAllBlogPosts();
-  const featuredPosts = allBlogPosts.slice(0, 6); // Show first 6 posts
+  // Get your actual blog posts with images from blogData
+  const featuredPosts = getFeaturedPosts().slice(0, 6); // Show first 6 featured posts
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -50,20 +49,28 @@ const BlogsSection = () => {
           >
             {/* Blog Header */}
             <div className="relative h-48 bg-gradient-to-br from-slate-700/50 to-slate-800/50 overflow-hidden">
+              {post.image ? (
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              ) : (
+                // Show category icon when no image
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">
+                    {post.category?.includes('DevOps') ? '⚙️' :
+                      post.category?.includes('AI') || post.category?.includes('Artificial Intelligence') ? '🤖' :
+                      post.category?.includes('Network') ? '🌐' :
+                      post.category?.includes('Linux') || post.category?.includes('System') ? '🐧' : '📝'}
+                  </span>
+                </div>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute top-4 left-4">
                 <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-lg">
-                  {post.tags[0]}
-                </span>
-              </div>
-              {/* Elegant icon display */}
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">
-                  {post.tags[0] === 'DevOps' ? '⚙️' :
-                   post.tags[0] === 'Linux' ? '🐧' :
-                   post.tags[0] === 'Networking' ? '🌐' :
-                   post.tags[0] === 'AI' ? '🤖' :
-                   post.tags[0] === 'Docker' ? '🐳' : '📝'}
+                  {post.category}
                 </span>
               </div>
             </div>
@@ -86,7 +93,7 @@ const BlogsSection = () => {
               </h3>
               
               <p className="text-slate-300 mb-5 leading-relaxed text-sm line-clamp-3">
-                {post.summary}
+                {post.excerpt}
               </p>
 
               {/* Tags */}
