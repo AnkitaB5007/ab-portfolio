@@ -16,6 +16,18 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
+    title: "Model Context Protocol: Architecture Explained",
+    excerpt: "A deep dive into the architecture of Model Context Protocol, exploring its components and how they interact.",
+    date: "2025-09-14",
+    readTime: "8 min read",
+    tags: ["AI", "Anthropic", "JSON-RPC 2.0", "Model Context Protocol", "MCP"],
+    category: "AI",
+    slug: "model-context-protocol-architecture",
+    image: "/blog-images/mcp-drawio-1.png",
+    featured: false
+  },
+  {
+    id: 2,
     title: "Model Context Protocol: Why It Matters",
     excerpt: "The WHY behind Model Context Protocol and its significance in AI interactions. Understanding the standardized way for AI systems to communicate with external tools.",
     date: "2025-09-07",
@@ -27,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     featured: true
   },
   {
-    id: 2,
+    id: 3,
     title: "What is DevOps? A Beginner's Guide",
     excerpt: "An overview of DevOps principles, best practices, and how to implement them in your projects using Python and GitHub Actions.",
     date: "2025-06-10",
@@ -39,7 +51,7 @@ export const blogPosts: BlogPost[] = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Linux Users and Groups Management",
     excerpt: "A technical reference for understanding and managing Linux user groups and file permissions, including commands, best practices, and security tips.",
     date: "2025-07-18",
@@ -51,7 +63,7 @@ export const blogPosts: BlogPost[] = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     title: "Understanding OSI and TCP/IP Models",
     excerpt: "Deep dive into networking fundamentals - comparing OSI and TCP/IP models, their layers, and how data flows through network protocols.",
     date: "2025-07-08",
@@ -63,7 +75,7 @@ export const blogPosts: BlogPost[] = [
     featured: false
   },
   {
-    id: 5,
+    id: 6,
     title: "Ports and Protocols in Networking",
     excerpt: "Comprehensive guide to network ports, protocols, and how they work together to enable communication in distributed systems.",
     date: "2025-07-08",
@@ -75,7 +87,7 @@ export const blogPosts: BlogPost[] = [
     featured: false
   },
   {
-    id: 6,
+    id: 7,
     title: "Understanding Messages in LLM Chat Interfaces",
     excerpt: "Explore how Large Language Models process and respond to messages in chat interfaces, including prompt engineering and conversation context.",
     date: "2025-07-02",
