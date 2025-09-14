@@ -16,6 +16,17 @@ export interface BlogPostMeta {
 export const blogPostsData: BlogPostMeta[] = [
   {
     id: 1,
+    title: "Model Context Protocol: Architecture Explained",
+    date: "2025-09-14",
+    summary: "Breaking down the architecture of Model Context Protocol with analogies and examples.",
+    tags: ["AI", "Anthropic", "JSON-RPC 2.0", "Model Context Protocol", "MCP"],
+    categories: ["AI"],
+    slug: "model-context-protocol-arch",
+    readTime: "7 min read",
+    content: ""
+  },
+  {
+    id: 2,
     title: "Model Context Protocol: Why It Matters",
     date: "2025-09-07",
     summary: "The WHY behind Model Context Protocol and its significance in AI interactions. Understanding the standardized way for AI systems to communicate with external tools.",
@@ -26,7 +37,18 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 2,
+    id: 3,
+    title: "What Are Messages in LLM Chat Interfaces",
+    date: "2025-07-02",
+    summary: "Understanding the role of messages in LLM chat interfaces, their structure, and how they facilitate communication between users and AI models.",
+    tags: ["AI", "LLM", "Chat Interfaces", "Machine Learning"],
+    categories: ["AI"],
+    slug: "what-are-messages-in-LLM-chat-interfaces",
+    readTime: "7 min read",
+    content: ""
+  },
+  {
+    id: 4,
     title: "What is DevOps? A Beginner's Guide",
     date: "2025-06-10",
     summary: "An overview of DevOps principles, best practices, and how to implement them in your projects using Python and GitHub Actions.",
@@ -37,7 +59,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: "" // Will be loaded dynamically
   },
   {
-    id: 3,
+    id: 5,
     title: "Linux Users and Groups",
     date: "2025-07-18",
     summary: "A technical reference for understanding and managing Linux user groups and file permissions, including commands, best practices, and security tips.",
@@ -48,7 +70,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 4,
+    id: 6,
     title: "Understand OSI and TCP/IP Models",
     date: "2025-07-07",
     summary: "An overview of the OSI and TCP/IP networking models, their layers, functions, and real-world applications.",
@@ -59,7 +81,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 5,
+    id: 7,
     title: "Ports and Protocols in Networking",
     date: "2025-07-08",
     summary: "Comprehensive guide to network ports, protocols, and how they work together to enable communication in distributed systems.",
@@ -70,18 +92,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 6,
-    title: "Understanding Messages in LLM Chat Interfaces",
-    date: "2025-07-02",
-    summary: "Explore how Large Language Models process and respond to messages in chat interfaces, including prompt engineering and conversation context.",
-    tags: ["AI", "LLM", "Machine Learning"],
-    categories: ["AI/ML"],
-    slug: "what-are-messages-in-LLM-chat-interfaces",
-    readTime: "7 min read",
-    content: ""
-  },
-  {
-    id: 7,
+    id: 8,
     title: "Debug Docker Basics",
     date: "2025-07-01",
     summary: "Essential Docker debugging techniques, common issues, and troubleshooting strategies for containerized applications.",
@@ -92,7 +103,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 8,
+    id: 9,
     title: "OSI Model Deep Dive",
     date: "2025-06-25",
     summary: "Detailed exploration of the OSI networking model and its seven layers.",
@@ -103,7 +114,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 9,
+    id: 10,
     title: "TCP/IP Model Explained",
     date: "2025-06-20",
     summary: "Understanding the TCP/IP networking model and how it compares to OSI.",
@@ -114,7 +125,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 10,
+    id: 11,
     title: "User and Group Management: A Case Study",
     date: "2025-06-15",
     summary: "Practical case study on Linux user and group management in enterprise environments.",
@@ -125,7 +136,7 @@ export const blogPostsData: BlogPostMeta[] = [
     content: ""
   },
   {
-    id: 11,
+    id: 12,
     title: "Understanding OSI vs TCP/IP",
     date: "2025-06-12",
     summary: "Comparative analysis of OSI and TCP/IP networking models.",
