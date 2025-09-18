@@ -18,6 +18,15 @@ export interface BlogPostMeta extends BlogPostMetaData {
 // Your actual blog posts metadata - just add new posts, IDs auto-generated!
 const blogPostsRawData: Omit<BlogPostMetaData, 'content'>[] = [
   {
+    title: "LangChain: An Overview of Its Core Components",
+    date: "2025-09-18",
+    summary: "At its foundation, LangChain is built around six major components: Models, Prompts, Chains, Memory, Indexes, and Agents.",
+    tags: ["AI", "LangChain", "LLM"],
+    categories: ["AI"],
+    slug: "langchain-an-overview",
+    readTime: "7 min read"
+  },
+  {
     title: "Model Context Protocol: Architecture Explained",
     date: "2025-09-14",
     summary: "Breaking down the architecture of Model Context Protocol with analogies and examples.",

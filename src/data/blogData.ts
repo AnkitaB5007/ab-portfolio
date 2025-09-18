@@ -19,6 +19,17 @@ export interface BlogPost extends BlogPostData {
 // Blog data - just add new posts at the top, IDs auto-generated!
 const blogPostsData: BlogPostData[] = [
   {
+    title: "LangChain: An Overview of Its Core Components",
+    excerpt: "At its foundation, LangChain is built around six major components: Models, Prompts, Chains, Memory, Indexes, and Agents.",
+    date: "2025-09-18",
+    readTime: "7 min read",
+    tags: ["AI", "LangChain", "LLM"],
+    category: "Artificial Intelligence",
+    slug: "langchain-an-overview",
+    image: "/blog-images/langchain-overview.png",
+    featured: true
+  },
+  {
     title: "Model Context Protocol: Architecture Explained",
     excerpt: "Breaking down the architecture of Model Context Protocol with analogies and examples.",
     date: "2025-09-14",
