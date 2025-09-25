@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: "https://github.com/AnkitaB5007/ab-portfolio.git", branch: "master"
+                git url: "https://github.com/AnkitaB5007/ab-portfolio.git", branch: "create-pipeline"
             }
         }
 
