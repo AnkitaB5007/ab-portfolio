@@ -13,36 +13,13 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                sh "npm ci"
-                echo "Dependencies installed from package-lock.json"
-            }
-        }
-
-        stage('Tests') {
-            steps {
-                echo "Running tests..."
-                // Example: sh "npm test"
-            }
-        }
-
         stage('Build') {
             steps {
-                sh "npm run build"
-                echo "Build completed!"
+                echo "Dependencies installed from package-lock.json"
+                sh "docker build -f Dockerfile-multi-serve -t ${DOCKER_REPO}:${BUILD_NUMBER} -t ${DOCKER_REPO}:latest ."
             }
         }
-
-        stage('Docker Build') {
-            steps {
-                script {
-                    sh "docker build -f Dockerfile-multi-serve -t ${DOCKER_REPO}:${BUILD_NUMBER} ."
-                    sh "docker tag ${DOCKER_REPO}:${BUILD_NUMBER} ${DOCKER_REPO}:latest"
-                }
-            }
-        }
-
+        
         stage('Push to DockerHub') {
             steps {
                 withCredentials([usernamePassword(
@@ -64,6 +41,13 @@ pipeline {
             }
         }
 
+        stage('Tests') {
+            steps {
+                echo "Running tests..."
+                // Example: sh "npm test"
+            }
+        }
+        
         stage('Package') {
             steps {
                 echo "Archiving build artifacts..."
